@@ -9,8 +9,11 @@ public class CircularBubbleSpawner : MonoBehaviour
    
     public GameObject[] spheres;
     public GameObject hintCanvasBlue;
+    public GameObject backToMenuCanvas;
+    public GameObject lastSphere;
         //public Transform[] points;
     //public float beat = 2;
+
     private float deg = 0;
     private int count = 0;
     private float increase = 0;
@@ -19,6 +22,8 @@ public class CircularBubbleSpawner : MonoBehaviour
     private float hintSpawnDeg = 0;
     private float angle = 0;
     private float radius = 10f;
+       private bool lastShotHappend = false;
+    private float gameDurationPerimeter = 90;
 
 
 
@@ -57,7 +62,7 @@ public class CircularBubbleSpawner : MonoBehaviour
         InitDeg();
 
 
-        if (deg <= (360 + rigRot))
+        if (deg <= (gameDurationPerimeter + rigRot))
         {
 
             
@@ -87,8 +92,32 @@ public class CircularBubbleSpawner : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(0);
+            if(!lastShotHappend)
+            {
+                deg += Random.Range(-30f, 60f);
 
+                if (count >= 3 && (deg < (increase + 60)))
+                {
+                    deg += 60;
+                    count = 0;
+                    increase = deg;
+                }
+
+                angle = (deg * Mathf.PI * 2f / 360);
+
+
+                Debug.Log("deg: " + deg);
+
+                Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
+                GameObject lastBall = Instantiate(lastSphere, newPos, Quaternion.identity);
+
+                count++;
+                lastShotHappend = true;
+            }
+            
+            
+            
+           
         }
     }
 
@@ -107,5 +136,7 @@ public class CircularBubbleSpawner : MonoBehaviour
             hintSpawnDeg = deg;
         }
     }
+
+    IEnumerator waiter(float seconds) { yield return new WaitForSeconds(seconds); }
 
 }

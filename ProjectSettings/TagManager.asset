@@ -12,6 +12,7 @@ TagManager:
   - RedSphere
   - YellowSphere
   - GreenSphere
+  - LastSphere
   layers:
   - Default
   - TransparentFX

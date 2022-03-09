@@ -10,6 +10,7 @@ public class Saber : MonoBehaviour
     private Vector3 previousPos;
     public AudioSource destroySound;
     private GameObject pointCounterManager;
+    public GameObject backToMenuCanvas;
 
 
     // Start is called before the first frame update
@@ -29,7 +30,8 @@ public class Saber : MonoBehaviour
         if( Physics.Raycast(transform.position, transform.forward, out hit, 1, layer) && (hit.transform.tag == "BlueSphere"
             || hit.transform.tag == "RedSphere"
             || hit.transform.tag == "YellowSphere"
-            || hit.transform.tag == "GreenSphere"))
+            || hit.transform.tag == "GreenSphere"
+            || hit.transform.tag == "LastSphere"))
         {
             
             
@@ -49,6 +51,12 @@ public class Saber : MonoBehaviour
                 {
                     PointCounterManager.points += 100f;
                 }
+                else if (hit.transform.tag == "LastSphere")
+                {
+                    PointCounterManager.points += 20f;
+                    StartCoroutine(wait(3));
+                    //Instantiate(backToMenuCanvas);
+                }
                 destroySound.Play();
                 Destroy(hit.transform.gameObject);
 
@@ -65,4 +73,6 @@ public class Saber : MonoBehaviour
         }
         previousPos = transform.position;
     }
+
+    IEnumerator wait(float seconds) { yield return new WaitForSeconds(5); }
 }

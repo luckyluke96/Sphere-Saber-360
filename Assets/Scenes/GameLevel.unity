@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 0.5803922}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -1183,6 +1183,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   destroySound: {fileID: 0}
+  backToMenuCanvas: {fileID: 7398891508686775217, guid: 478127f7e79584da2b4cb45a06f9b970, type: 3}
 --- !u!1 &473813784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35ff739760fd4726bc9c69a4fde614e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backToMenuCanvas: {fileID: 7398891508686775217, guid: 478127f7e79584da2b4cb45a06f9b970, type: 3}
 --- !u!135 &473813786
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1287,7 +1289,7 @@ Transform:
   m_GameObject: {fileID: 473813784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.08, z: 0}
-  m_LocalScale: {x: 1.4345641, y: 1.4345641, z: 1.4345641}
+  m_LocalScale: {x: 5.5184894, y: 5.5184894, z: 5.5184894}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -1946,6 +1948,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   destroySound: {fileID: 0}
+  backToMenuCanvas: {fileID: 7398891508686775217, guid: 478127f7e79584da2b4cb45a06f9b970, type: 3}
 --- !u!1001 &553897271
 PrefabInstance:
   m_ObjectHideFlags: 0

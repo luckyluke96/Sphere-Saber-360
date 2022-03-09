@@ -47,3 +47,5 @@ MonoBehaviour:
   - {fileID: 3850512039321198087, guid: c0bf206703ce61f42af6ca5e2efc782c, type: 3}
   - {fileID: 3850512039321198087, guid: 8c710b9cce3994e8988764724e46bb3f, type: 3}
   hintCanvasBlue: {fileID: 1260803153734930437, guid: e3af4f73fb2af4646a2ffdc1610c9350, type: 3}
+  backToMenuCanvas: {fileID: 7398891508686775217, guid: 478127f7e79584da2b4cb45a06f9b970, type: 3}
+  lastSphere: {fileID: 3603151115940806371, guid: 6d0742d9a9d68455da42999344a44fe2, type: 3}
