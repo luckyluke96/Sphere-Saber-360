@@ -20,7 +20,7 @@ public class SphereMove : MonoBehaviour
     {
         Camera camera = Camera.main;
         Vector3 camPosition = camera.ViewportToWorldPoint(new Vector3(0, 0, camera.nearClipPlane));
-        Vector3 updatedPos = new Vector3(camPosition.x, camPosition.y - 0.2f, camPosition.z);
+        Vector3 updatedPos = new Vector3(camPosition.x, camPosition.y - 0.4f, camPosition.z);
 
         // Movement towards camposition
         transform.position = Vector3.MoveTowards(transform.position, updatedPos, Time.deltaTime * 0.8f);

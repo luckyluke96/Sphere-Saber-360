@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class Saber : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Saber : MonoBehaviour
     public AudioSource destroySound;
     private GameObject pointCounterManager;
     public GameObject backToMenuCanvas;
+
 
 
     // Start is called before the first frame update
@@ -54,8 +56,12 @@ public class Saber : MonoBehaviour
                 else if (hit.transform.tag == "LastSphere")
                 {
                     PointCounterManager.points += 20f;
-                    StartCoroutine(wait(3));
+                    //StartCoroutine(wait(3));
                     //Instantiate(backToMenuCanvas);
+
+                    DataCollection.LogGameData();
+                    SceneManager.LoadScene(0);
+                    
                 }
                 destroySound.Play();
                 Destroy(hit.transform.gameObject);

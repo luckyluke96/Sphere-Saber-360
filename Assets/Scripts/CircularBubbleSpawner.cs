@@ -9,6 +9,7 @@ public class CircularBubbleSpawner : MonoBehaviour
    
     public GameObject[] spheres;
     public GameObject hintCanvasBlue;
+    public GameObject hintCanvasYellow;
     public GameObject backToMenuCanvas;
     public GameObject lastSphere;
         //public Transform[] points;
@@ -21,9 +22,11 @@ public class CircularBubbleSpawner : MonoBehaviour
     private bool rigDegNotInit = true;
     private float hintSpawnDeg = 0;
     private float angle = 0;
-    private float radius = 10f;
-       private bool lastShotHappend = false;
-    private float gameDurationPerimeter = 90;
+    private float radius = 6f;
+    private bool lastShotHappend = false;
+    private float gameDurationPerimeter = 360;
+    private int numColors = 1;
+    private int bubbleCounter = 0;
 
 
 
@@ -66,7 +69,6 @@ public class CircularBubbleSpawner : MonoBehaviour
         {
 
             
-
             deg += Random.Range(-30f, 60f);
 
             if (count >= 3 && (deg < (increase + 60)))
@@ -82,11 +84,13 @@ public class CircularBubbleSpawner : MonoBehaviour
             Debug.Log("deg: " + deg);
 
             Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
-            GameObject ball = Instantiate(spheres[Random.Range(0, spheres.Length)], newPos, Quaternion.identity);
+            GameObject ball = Instantiate(spheres[Random.Range(0, numColors)], newPos, Quaternion.identity);
+
 
             // spawn Hint Canvas if possible
             spawnHint();
 
+            bubbleCounter++;
             count++;
            
         }
@@ -111,6 +115,7 @@ public class CircularBubbleSpawner : MonoBehaviour
                 Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
                 GameObject lastBall = Instantiate(lastSphere, newPos, Quaternion.identity);
 
+                bubbleCounter++;
                 count++;
                 lastShotHappend = true;
             }
@@ -131,12 +136,25 @@ public class CircularBubbleSpawner : MonoBehaviour
         if(deg >= (hintSpawnDeg + 120))
         {
             Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
-            Instantiate(hintCanvasBlue, newPos, Quaternion.Euler(0f, deg, 0f));
+
+            if(numColors == 1)
+            {
+                Instantiate(hintCanvasBlue, newPos, Quaternion.Euler(0f, deg, 0f));
+            }
+            else if(numColors == 2)
+            {
+                Instantiate(hintCanvasYellow, newPos, Quaternion.Euler(0f, deg, 0f));
+            }
+            
+            
+            numColors++;
 
             hintSpawnDeg = deg;
         }
     }
 
-    IEnumerator waiter(float seconds) { yield return new WaitForSeconds(seconds); }
+
+
+    
 
 }

@@ -23,14 +23,16 @@ public class SafetySphereScript : MonoBehaviour
         Debug.Log("trigger: "+other.tag);
         if(other.tag == "RedSphere" || other.tag == "BlueSphere")
         {
+            PointCounterManager.points += 20f;
             Destroy(other.gameObject);
         }
         else if (other.tag == "LastSphere")
         {
             
             Destroy(other.gameObject);
-            
-            StartCoroutine(wait(10));
+            DataCollection.LogGameData();
+
+            //StartCoroutine(wait(10));
             //Instantiate(backToMenuCanvas);
             SceneManager.LoadScene(0);
 
