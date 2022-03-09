@@ -49,7 +49,7 @@ public class DataCollection : MonoBehaviour
                          + "\t" + TimePressureStudyLogic.Instance.currentMode.ToString() + "\t" + GameDataManager.Instance.amountOfFinishedBubbleRounds + "\t" + GameDataManager.Instance.amountOfFinishedBubbleRoundsThisRound + "\t" + Configuration.Instance.resetDistanceBetweenBubbles + "\t" + TimePressureStudyLogic.Instance.currentCondition.ToString() + "\t" + ((float) Configuration.Instance.levelLength / GameDataManager.Instance.amountOfFinishedBubbleRounds);
             */
             string columnString = "Points" + "\t" + "Gaze_Duration";
-            string logString = PointCounterManager.points + "\t" + PointCounterManager.gazeDur; 
+            string logString = "Points: " + PointCounterManager.points + "," + "\t" + "Dur: " + PointCounterManager.gazeDur; 
             // add column names only when file is created the first time -> das hier überschreibt alles
             if (!File.Exists(pathAllHighscores))
             {
