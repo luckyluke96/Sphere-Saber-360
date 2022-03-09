@@ -12,11 +12,14 @@ namespace Tobii.XR.Examples.GettingStarted
         public Color highlightColor = Color.red;
         public float animationTime = 0.1f;
 
+
         private Renderer _renderer;
         private Color _originalColor;
         private Color _targetColor;
         private float tTime;
         private bool focus;
+        private System.DateTime startTime;
+        private System.DateTime endTime;
 
         //The method of the "IGazeFocusable" interface, which will be called when this object receives or loses focus
         public void GazeFocusChanged(bool hasFocus)
@@ -25,6 +28,7 @@ namespace Tobii.XR.Examples.GettingStarted
             //If this object received focus, fade the object's color to highlight color
             if (hasFocus)
             {
+                //startTime = System.DateTime.UtcNow;
                 _targetColor = highlightColor;
                 // PointCounterManager.gazeDur += 10;
                 
@@ -32,8 +36,10 @@ namespace Tobii.XR.Examples.GettingStarted
             //If this object lost focus, fade the object's color to it's original color
             else
             {
+                //endTime = System.DateTime.UtcNow;
                 _targetColor = _originalColor;
-                // PointCounterManager.gazeDur += tTime;
+                //System.TimeSpan diffTime = endTime - startTime;
+                //PointCounterManager.gazeDur += diffTime.Milliseconds;
             }
         }
 
@@ -46,6 +52,7 @@ namespace Tobii.XR.Examples.GettingStarted
 
         private void Update()
         {
+            
             //This lerp will fade the color of the object
             if (_renderer.material.HasProperty(_baseColor)) // new rendering pipeline (lightweight, hd, universal...)
             {
@@ -56,12 +63,20 @@ namespace Tobii.XR.Examples.GettingStarted
                 _renderer.material.color = Color.Lerp(_renderer.material.color, _targetColor, Time.deltaTime * (1 / animationTime));
             }
 
-            if(focus)
+            
+            
+            
+            
+            
+        }
+
+        private void FixedUpdate()
+        {
+            if (focus)
             {
                 tTime += Time.deltaTime;
                 PointCounterManager.gazeDur += tTime;
             }
-            
         }
     }
 }

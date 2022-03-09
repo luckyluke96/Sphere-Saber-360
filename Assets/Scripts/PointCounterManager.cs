@@ -27,9 +27,9 @@ public class PointCounterManager : MonoBehaviour
     {
         
         PointCounterText = GameObject.Find("PointCounterText").GetComponent<Text>();
-        PointCounterText.text = "Punkte: " + points.ToString();
+        // PointCounterText.text = "Punkte: " + points.ToString();
 
-        //PointCounterText.text = "gaze: " + gazeDur.ToString();
+        PointCounterText.text = "gaze: " + gazeDur.ToString() + "ms";
 
 
         

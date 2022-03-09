@@ -24,7 +24,7 @@ public class CircularBubbleSpawner : MonoBehaviour
     private float angle = 0;
     private float radius = 6f;
     private bool lastShotHappend = false;
-    private float gameDurationPerimeter = 360;
+    private float gameDurationPerimeter = 180;
     private int numColors = 1;
     private int bubbleCounter = 0;
 

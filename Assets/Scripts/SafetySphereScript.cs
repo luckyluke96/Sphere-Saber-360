@@ -21,9 +21,9 @@ public class SafetySphereScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("trigger: "+other.tag);
-        if(other.tag == "RedSphere" || other.tag == "BlueSphere")
+        if(other.tag == "RedSphere" || other.tag == "BlueSphere" || other.tag == "YellowSphere")
         {
-            PointCounterManager.points += 20f;
+            PointCounterManager.points -= 20f;
             Destroy(other.gameObject);
         }
         else if (other.tag == "LastSphere")
