@@ -13,6 +13,10 @@ TagManager:
   - YellowSphere
   - GreenSphere
   - LastSphere
+  - HintCanvasBlue
+  - HintCanvasYellow
+  - PointCounterCanvas
+  - TestCube
   layers:
   - Default
   - TransparentFX

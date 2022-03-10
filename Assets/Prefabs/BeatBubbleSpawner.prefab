@@ -320,7 +320,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4104805378148987800}
   - component: {fileID: 4104805378148987807}
-  - component: {fileID: 7581160382923083186}
   m_Layer: 0
   m_Name: BeatBubbleSpawner
   m_TagString: Untagged
@@ -377,23 +376,6 @@ MonoBehaviour:
   - {fileID: 4104805377282439791}
   - {fileID: 3876116725958045577}
   beat: 1
---- !u!114 &7581160382923083186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4104805378148987801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1a25529a78aaa941b390bdaa785a8b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spheres:
-  - {fileID: 6226832386588414061, guid: 45158f58cee84de4e88085d34b3be047, type: 3}
-  - {fileID: 3850512039321198087, guid: c0bf206703ce61f42af6ca5e2efc782c, type: 3}
-  hintCanvasBlue: {fileID: 0}
-  backToMenuCanvas: {fileID: 7398891508686775217, guid: 478127f7e79584da2b4cb45a06f9b970, type: 3}
 --- !u!1 &4104805378247711580
 GameObject:
   m_ObjectHideFlags: 0

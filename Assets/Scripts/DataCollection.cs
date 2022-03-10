@@ -48,12 +48,16 @@ public class DataCollection : MonoBehaviour
                          HighScore.Instance.score + "\t" + headMovement + "\t" + rightHandMovement + "\t" + leftHandMovement + "\t" + rightHandMovementAboveHead + "\t" + rightHandAboveHeadTime + "\t" + leftHandMovementAboveHead + "\t" + leftHandAboveHeadTime
                          + "\t" + TimePressureStudyLogic.Instance.currentMode.ToString() + "\t" + GameDataManager.Instance.amountOfFinishedBubbleRounds + "\t" + GameDataManager.Instance.amountOfFinishedBubbleRoundsThisRound + "\t" + Configuration.Instance.resetDistanceBetweenBubbles + "\t" + TimePressureStudyLogic.Instance.currentCondition.ToString() + "\t" + ((float) Configuration.Instance.levelLength / GameDataManager.Instance.amountOfFinishedBubbleRounds);
             */
-            string columnString = "Points" + "\t" + "Gaze_Duration";
-            string logString = "Points: " + PointCounterManager.points + "," + "\t" + "Dur: " + PointCounterManager.gazeDur; 
+            string columnString = "Points," + "Gaze_Dur_Blue_Canvas," + "Gaze_Dur_Yellow_Canvas," + "Gaze_Point_Counter_Canvas," +
+                "Gaze_Dur_Total,"  + "Gaze_Dur_RedSphere," + "Gaze_Dur_BlueSphere," + "Gaze_Dur_YellowSphere\n";
+            string logString = PointCounterManager.points + "," + PointCounterManager.gazeDurBlueCanvas + "," + PointCounterManager.gazeDurYellowCanvas + "," + PointCounterManager.gazeDurPointCounterCanvas +
+                "," + PointCounterManager.gazeDur + "," + PointCounterManager.gazeDurRedSphere + "," + PointCounterManager.gazeDurBlueSphere + "," + PointCounterManager.gazeDurYellowSphere;
+            
             // add column names only when file is created the first time -> das hier überschreibt alles
             if (!File.Exists(pathAllHighscores))
             {
                 File.WriteAllText(pathAllHighscores, columnString);
+                
             }
             // always save data recorded during one run -> das hier hängt Text unten an eine Datei an
             using (StreamWriter sw = File.AppendText(pathAllHighscores))

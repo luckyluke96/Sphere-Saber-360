@@ -48,7 +48,7 @@ MonoBehaviour:
   - {fileID: 3850512039321198087, guid: 8c710b9cce3994e8988764724e46bb3f, type: 3}
   - {fileID: 2079408704318703238, guid: f68752e133c95184a83f3b6853c68589, type: 3}
   - {fileID: 578860705192998572, guid: a02674f4588d12d42aafd3efafbd5e06, type: 3}
-  hintCanvasBlue: {fileID: 1311187226974418043, guid: 2ca75d7e9a586491fad3b921f3386081, type: 3}
-  hintCanvasYellow: {fileID: 6638988676309675344, guid: 833730fd7a1ff49399defb7e2984da0c, type: 3}
+  hintCanvasBlue: {fileID: 708489014920018071, guid: cb71d30ecbaff41b697842a23c52c6c4, type: 3}
+  hintCanvasYellow: {fileID: 7498587623707266966, guid: 833730fd7a1ff49399defb7e2984da0c, type: 3}
   backToMenuCanvas: {fileID: 7398891508686775217, guid: 478127f7e79584da2b4cb45a06f9b970, type: 3}
   lastSphere: {fileID: 3603151115940806371, guid: 6d0742d9a9d68455da42999344a44fe2, type: 3}

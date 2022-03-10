@@ -11,11 +11,11 @@ namespace Tobii.XR.Examples.GettingStarted
         private static readonly int _baseColor = Shader.PropertyToID("_BaseColor");
         public Color highlightColor = Color.red;
         public float animationTime = 0.1f;
-
-
+        
         private Renderer _renderer;
         private Color _originalColor;
         private Color _targetColor;
+        private float timer;
         private float tTime;
         private bool focus;
         private System.DateTime startTime;
@@ -64,19 +64,77 @@ namespace Tobii.XR.Examples.GettingStarted
             }
 
             
+
+            if (focus)
+            {
+                
+                // tTime = Time.deltaTime;
+                // PointCounterManager.gazeDur += tTime;
+
+                if(gameObject.tag == "TestCube")
+                {
+                    tTime = Time.deltaTime;
+                    PointCounterManager.gazeDur += tTime;
+                }
+
+                /*
+                if (gameObject.tag == "HintCanvasBlue")
+                {
+                    // tTime += Time.deltaTime;
+                    PointCounterManager.gazeDurBlueCanvas += tTime;
+                }
+                else if (gameObject.tag == "HintCanvasYellow")
+                {
+                    // tTime += Time.deltaTime;
+                    PointCounterManager.gazeDurYellowCanvas += tTime;
+
+                }
+                else if (gameObject.tag == "PointCounterCanvas")
+                {
+                    // tTime += Time.deltaTime;
+                    PointCounterManager.gazeDurPointCounterCanvas += tTime;
+
+                }
+                else if (gameObject.tag == "BlueSphere")
+                {
+                    // tTime += Time.deltaTime;
+                    PointCounterManager.gazeDurBlueSphere += tTime;
+
+                }
+                else if (gameObject.tag == "RedSphere")
+                {
+                    // tTime += Time.deltaTime;
+                    PointCounterManager.gazeDurRedSphere += tTime;
+
+                }
+                else if (gameObject.tag == "YellowSphere")
+                {
+                    // tTime += Time.deltaTime;
+                    PointCounterManager.gazeDurYellowSphere += tTime;
+
+                }
+                */
+                
+            }
             
-            
-            
-            
+
         }
 
         private void FixedUpdate()
         {
-            if (focus)
-            {
-                tTime += Time.deltaTime;
-                PointCounterManager.gazeDur += tTime;
-            }
+            /*
+            Debug.Log("OldTimer: " + timer);
+            float delta = Time.deltaTime;
+            PointCounterManager.timer = PointCounterManager.timer + delta;
+            timer += delta;
+
+            Debug.Log("DeltaTime: " + delta);
+            Debug.Log("FixedUpdate: " + timer);
+            Debug.Log("PointerCoutnerTimer: " + PointCounterManager.timer);
+            */
+
+            
+
         }
     }
 }

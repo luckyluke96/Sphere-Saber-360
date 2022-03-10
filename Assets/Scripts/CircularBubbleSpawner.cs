@@ -24,7 +24,7 @@ public class CircularBubbleSpawner : MonoBehaviour
     private float angle = 0;
     private float radius = 6f;
     private bool lastShotHappend = false;
-    private float gameDurationPerimeter = 180;
+    private float gameDurationPerimeter = 360;
     private int numColors = 1;
     private int bubbleCounter = 0;
 
@@ -81,7 +81,7 @@ public class CircularBubbleSpawner : MonoBehaviour
             angle = (deg * Mathf.PI * 2f / 360);
 
 
-            Debug.Log("deg: " + deg);
+            //Debug.Log("deg: " + deg);
 
             Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
             GameObject ball = Instantiate(spheres[Random.Range(0, numColors)], newPos, Quaternion.identity);
@@ -110,7 +110,7 @@ public class CircularBubbleSpawner : MonoBehaviour
                 angle = (deg * Mathf.PI * 2f / 360);
 
 
-                Debug.Log("deg: " + deg);
+                //Debug.Log("deg: " + deg);
 
                 Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
                 GameObject lastBall = Instantiate(lastSphere, newPos, Quaternion.identity);

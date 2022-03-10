@@ -23,7 +23,7 @@ public class SpawnManagerScript : MonoBehaviour
         //transform.position(newPos);
 
         string filePath = Application.persistentDataPath + "/test.txt";
-        Debug.Log(filePath);
+        //Debug.Log(filePath);
         File.WriteAllText("test.txt", "hallo test text");
     }
 
