@@ -31,7 +31,46 @@ namespace Tobii.XR.Examples.GettingStarted
                 //startTime = System.DateTime.UtcNow;
                 _targetColor = highlightColor;
                 // PointCounterManager.gazeDur += 10;
-                
+
+                if (gameObject.tag == "TestCube")
+                {
+                    
+                }
+                else if (gameObject.tag == "HintCanvasBlue")
+                {
+                    PointCounterManager.gazeCountBlueCanvas += 1;
+                }
+                else if (gameObject.tag == "HintCanvasYellow")
+                {
+                    PointCounterManager.gazeCountYellowCanvas += 1;
+
+                }
+                else if (gameObject.tag == "PointCounterCanvas")
+                {
+                    PointCounterManager.gazeCountPointCounterCanvas += 1;
+
+                }
+                else if (gameObject.tag == "BlueSphere")
+                {
+                    PointCounterManager.gazeCountBlueSphere += 1;
+
+                }
+                else if (gameObject.tag == "RedSphere")
+                {
+                    PointCounterManager.gazeCountRedSphere += 1;
+
+                }
+                else if (gameObject.tag == "YellowSphere")
+                {
+                    PointCounterManager.gazeCountYellowSphere += 1;
+
+                }
+                else if (gameObject.tag == "HintCanvasLeftHand")
+                {
+                    PointCounterManager.gazeCountLeftHandCanvas += 1;
+
+                }
+
             }
             //If this object lost focus, fade the object's color to it's original color
             else
@@ -67,54 +106,58 @@ namespace Tobii.XR.Examples.GettingStarted
 
             if (focus)
             {
-                
+
                 // tTime = Time.deltaTime;
                 // PointCounterManager.gazeDur += tTime;
 
-                if(gameObject.tag == "TestCube")
+                if (gameObject.tag == "TestCube")
                 {
                     tTime = Time.deltaTime;
                     PointCounterManager.gazeDur += tTime;
                 }
-
-                /*
-                if (gameObject.tag == "HintCanvasBlue")
+                else if (gameObject.tag == "HintCanvasBlue")
                 {
-                    // tTime += Time.deltaTime;
+                    tTime = Time.deltaTime;
                     PointCounterManager.gazeDurBlueCanvas += tTime;
                 }
                 else if (gameObject.tag == "HintCanvasYellow")
                 {
-                    // tTime += Time.deltaTime;
+                    tTime = Time.deltaTime;
                     PointCounterManager.gazeDurYellowCanvas += tTime;
 
                 }
                 else if (gameObject.tag == "PointCounterCanvas")
                 {
-                    // tTime += Time.deltaTime;
+                    tTime = Time.deltaTime;
                     PointCounterManager.gazeDurPointCounterCanvas += tTime;
 
                 }
                 else if (gameObject.tag == "BlueSphere")
                 {
-                    // tTime += Time.deltaTime;
+                    tTime = Time.deltaTime;
                     PointCounterManager.gazeDurBlueSphere += tTime;
 
                 }
                 else if (gameObject.tag == "RedSphere")
                 {
-                    // tTime += Time.deltaTime;
+                    tTime = Time.deltaTime;
                     PointCounterManager.gazeDurRedSphere += tTime;
 
                 }
                 else if (gameObject.tag == "YellowSphere")
                 {
-                    // tTime += Time.deltaTime;
+                    tTime = Time.deltaTime;
                     PointCounterManager.gazeDurYellowSphere += tTime;
 
                 }
-                */
-                
+                else if (gameObject.tag == "HintCanvasLeftHand")
+                {
+                    tTime = Time.deltaTime;
+                    PointCounterManager.gazeDurLeftHandCanvas += tTime;
+
+                }
+
+
             }
             
 

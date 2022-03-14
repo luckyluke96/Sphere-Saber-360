@@ -52,3 +52,4 @@ MonoBehaviour:
   hintCanvasYellow: {fileID: 7498587623707266966, guid: 833730fd7a1ff49399defb7e2984da0c, type: 3}
   backToMenuCanvas: {fileID: 7398891508686775217, guid: 478127f7e79584da2b4cb45a06f9b970, type: 3}
   lastSphere: {fileID: 3603151115940806371, guid: 6d0742d9a9d68455da42999344a44fe2, type: 3}
+  hintCanvasLeftHand: {fileID: 5772372324243092441, guid: 41fadc842368f4fd6b14bead3d42131a, type: 3}

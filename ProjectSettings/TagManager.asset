@@ -17,6 +17,7 @@ TagManager:
   - HintCanvasYellow
   - PointCounterCanvas
   - TestCube
+  - HintCanvasLeftHand
   layers:
   - Default
   - TransparentFX

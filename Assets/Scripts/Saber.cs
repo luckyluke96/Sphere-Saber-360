@@ -14,12 +14,12 @@ public class Saber : MonoBehaviour
     public GameObject backToMenuCanvas;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
         destroySound = GetComponent<AudioSource>();
         pointCounterManager = GameObject.Find("PointCounterManager");
+        
         // pointCounterManagerScript = pointCounterManager.GetComponent<PointCounterManagerScript>();
     }
 
@@ -48,10 +48,20 @@ public class Saber : MonoBehaviour
                 else if (hit.transform.tag == "RedSphere")
                 {
                     PointCounterManager.points += 20f;
+
+                    if (CircularBubbleSpawner.leftHandBonus)
+                    {
+                        PointCounterManager.points += 20f;
+                    }
                 }
                 else if (hit.transform.tag == "YellowSphere")
                 {
                     PointCounterManager.points += 100f;
+
+                    if (CircularBubbleSpawner.leftHandBonus)
+                    {
+                        PointCounterManager.points += 100f;
+                    }
                 }
                 else if (hit.transform.tag == "LastSphere")
                 {

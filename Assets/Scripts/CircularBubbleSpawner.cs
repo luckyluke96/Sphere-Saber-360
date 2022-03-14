@@ -12,6 +12,9 @@ public class CircularBubbleSpawner : MonoBehaviour
     public GameObject hintCanvasYellow;
     public GameObject backToMenuCanvas;
     public GameObject lastSphere;
+    public GameObject hintCanvasLeftHand;
+
+    public static bool leftHandBonus = false;
         //public Transform[] points;
     //public float beat = 2;
 
@@ -24,7 +27,7 @@ public class CircularBubbleSpawner : MonoBehaviour
     private float angle = 0;
     private float radius = 6f;
     private bool lastShotHappend = false;
-    private float gameDurationPerimeter = 360;
+    private float gameDurationPerimeter = 720;
     private int numColors = 1;
     private int bubbleCounter = 0;
 
@@ -140,14 +143,20 @@ public class CircularBubbleSpawner : MonoBehaviour
             if(numColors == 1)
             {
                 Instantiate(hintCanvasBlue, newPos, Quaternion.Euler(0f, deg, 0f));
+                numColors++;
             }
             else if(numColors == 2)
             {
                 Instantiate(hintCanvasYellow, newPos, Quaternion.Euler(0f, deg, 0f));
+                numColors++;
+            }
+            else if(numColors == 3)
+            {
+                Instantiate(hintCanvasLeftHand, newPos, Quaternion.Euler(0f, deg, 0f));
+                leftHandBonus = true;
             }
             
             
-            numColors++;
 
             hintSpawnDeg = deg;
         }

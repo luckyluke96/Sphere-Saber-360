@@ -7,6 +7,7 @@ using System.IO;
 public class PointCounterManager : MonoBehaviour
 {
     private Text PointCounterText;
+    private Text GazeCounterText;
     private Text TimerText;
 
     public static float points;
@@ -19,6 +20,15 @@ public class PointCounterManager : MonoBehaviour
     public static float gazeDurBlueSphere;
     public static float gazeDurRedSphere;
     public static float gazeDurYellowSphere;
+    public static float gazeDurLeftHandCanvas;
+
+    public static int gazeCountBlueCanvas;
+    public static int gazeCountYellowCanvas;
+    public static int gazeCountPointCounterCanvas;
+    public static int gazeCountBlueSphere;
+    public static int gazeCountRedSphere;
+    public static int gazeCountYellowSphere;
+    public static int gazeCountLeftHandCanvas;
     //public int points;
 
     // Start is called before the first frame update
@@ -36,16 +46,17 @@ public class PointCounterManager : MonoBehaviour
     void Update()
     {
         
+        //GazeCounterText = GameObject.Find("PointCounterTextStable").GetComponent<Text>();
+        //TimerText = GameObject.Find("TimerText").GetComponent<Text>();
+
         PointCounterText = GameObject.Find("PointCounterText").GetComponent<Text>();
-        TimerText = GameObject.Find("TimerText").GetComponent<Text>();
+        PointCounterText.text = "Punkte: " + points.ToString();
+        // gazeDur = gazeDurBlueCanvas + gazeDurYellowCanvas + gazeDurPointCounterCanvas + gazeDurBlueSphere + gazeDurRedSphere + gazeDurYellowSphere;
 
-        // PointCounterText.text = "Punkte: " + points.ToString();
-        // gazeDur += gazeDurBlueCanvas + gazeDurYellowCanvas + gazeDurPointCounterCanvas + gazeDurBlueSphere + gazeDurRedSphere + gazeDurYellowSphere;
+        // GazeCounterText.text = "redbubble " + gazeDurRedSphere.ToString() + "ms\nbluesphere " + gazeDurBlueSphere.ToString();
 
-        PointCounterText.text = "gaze: " + gazeDur.ToString() + "ms";
-
-        timer += Time.deltaTime;
-        TimerText.text = "time: " + timer.ToString() + "ms";
+        // timer += Time.deltaTime;
+        // TimerText.text = "time: " + timer.ToString() + "s";
             
 
         

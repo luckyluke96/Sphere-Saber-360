@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2870390127066811662}
   m_Layer: 5
   m_Name: PointCounterText
-  m_TagString: Untagged
+  m_TagString: PointCounterCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2870390127427707695}
   m_Layer: 5
   m_Name: PointCounterCanvas
-  m_TagString: Untagged
+  m_TagString: PointCounterCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2870390127427707689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +227,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2870390127427689684}
     m_Modifications:
+    - target: {fileID: 3877365747926431478, guid: e4e0240824953451dbf646e850b5f169, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7644357275661237601, guid: e4e0240824953451dbf646e850b5f169, type: 3}
       propertyPath: m_RootOrder
       value: 1
