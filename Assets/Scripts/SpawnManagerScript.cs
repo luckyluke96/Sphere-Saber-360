@@ -22,9 +22,9 @@ public class SpawnManagerScript : MonoBehaviour
         Instantiate(PointCounterCanvas, newPos, Quaternion.Euler(0f, deg, 0f));
         //transform.position(newPos);
 
-        string filePath = Application.persistentDataPath + "/test.txt";
+        // string filePath = Application.persistentDataPath + "/test.txt";
         //Debug.Log(filePath);
-        File.WriteAllText("test.txt", "hallo test text");
+        // File.WriteAllText("test.txt", "hallo test text");
     }
 
     // Update is called once per frame

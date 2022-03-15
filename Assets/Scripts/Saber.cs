@@ -76,8 +76,8 @@ public class Saber : MonoBehaviour
                 destroySound.Play();
                 Destroy(hit.transform.gameObject);
 
-                string filePath = Application.persistentDataPath + "/test.txt";
-                File.WriteAllText("test.txt", "hallo test text");
+                // string filePath = Application.persistentDataPath + "/test.txt";
+                // File.WriteAllText("test.txt", "hallo test text");
 
 
 
