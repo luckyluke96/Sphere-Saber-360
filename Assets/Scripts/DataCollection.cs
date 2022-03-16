@@ -51,13 +51,22 @@ public class DataCollection : MonoBehaviour
             string columnString = "DateTime," + "Points," +
                 "Gaze_Dur_Blue_Canvas," + "Gaze_Dur_Yellow_Canvas," + "Gaze_Point_Counter_Canvas," + "Gaze_Dur_LeftHand_Canvas," + 
                 "Gaze_Dur_Total,"  + "Gaze_Dur_RedSphere," + "Gaze_Dur_BlueSphere," + "Gaze_Dur_YellowSphere," +
+                "Gaze_Dur_FoxMoving," + "Gaze_Dur_FoxRigid," + "Gaze_Dur_Terrain," + 
                 "Gaze_Count_Blue_Canvas," + "Gaze_Count_Yellow_Canvas," + "Gaze_Count_Pointer_Canvas," +
-                "Gaze_Count_Blue_Sphere," + "Gaze_Count_Red_Sphere," + "Gaze_Count_Yellow_Sphere\n";
+                "Gaze_Count_Blue_Sphere," + "Gaze_Count_Red_Sphere," + "Gaze_Count_Yellow_Sphere," +
+                "GazeCount_FoxMoving," + "Gaze_Count_Fox_Rigid," + "Gaze_Count_Terrain" +
+                "TimeToRecFox," +
+                "Circular_Game_Dur," + "\n";
             string logString = DateTime.Now + "," + PointCounterManager.points +
                 "," + PointCounterManager.gazeDurBlueCanvas + "," + PointCounterManager.gazeDurYellowCanvas + "," + PointCounterManager.gazeDurPointCounterCanvas + "," + PointCounterManager.gazeDurLeftHandCanvas +
                 "," + PointCounterManager.gazeDur + "," + PointCounterManager.gazeDurRedSphere + "," + PointCounterManager.gazeDurBlueSphere + "," + PointCounterManager.gazeDurYellowSphere +
+                "," + PointCounterManager.gazeDurFoxMoving + "," + PointCounterManager.gazeDurFoxRigid + "," + PointCounterManager.gazeDurTerrain +
                 "," + PointCounterManager.gazeCountBlueCanvas + "," + PointCounterManager.gazeCountYellowCanvas + "," + PointCounterManager.gazeCountPointCounterCanvas +
-                "," + PointCounterManager.gazeCountBlueSphere + "," + PointCounterManager.gazeCountRedSphere + "," + PointCounterManager.gazeCountYellowSphere;
+                "," + PointCounterManager.gazeCountBlueSphere + "," + PointCounterManager.gazeCountRedSphere + "," + PointCounterManager.gazeCountYellowSphere +
+                "," + PointCounterManager.gazeCountFoxMoving + "," + PointCounterManager.gazeCountFoxRigid + "," + PointCounterManager.gazeCountTerrain +
+                "," + PointCounterManager.timeToRecFox +
+                "," + PointCounterManager.durCircularGame;
+
             
             // add column names only when file is created the first time -> das hier überschreibt alles
             if (!File.Exists(pathAllHighscores))

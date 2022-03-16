@@ -70,6 +70,21 @@ namespace Tobii.XR.Examples.GettingStarted
                     PointCounterManager.gazeCountLeftHandCanvas += 1;
 
                 }
+                else if (gameObject.tag == "FoxMoving")
+                {
+                    PointCounterManager.gazeCountFoxMoving += 1;
+
+                }
+                else if (gameObject.tag == "FoxRigid")
+                {
+                    PointCounterManager.gazeCountFoxRigid += 1;
+
+                }
+                else if (gameObject.tag == "Terrain")
+                {
+                    PointCounterManager.gazeCountTerrain += 1;
+
+                }
 
             }
             //If this object lost focus, fade the object's color to it's original color
@@ -91,16 +106,17 @@ namespace Tobii.XR.Examples.GettingStarted
 
         private void Update()
         {
-            
+            /*
             //This lerp will fade the color of the object
             if (_renderer.material.HasProperty(_baseColor)) // new rendering pipeline (lightweight, hd, universal...)
             {
-                _renderer.material.SetColor(_baseColor, Color.Lerp(_renderer.material.GetColor(_baseColor), _targetColor, Time.deltaTime * (1 / animationTime)));
+                //_renderer.material.SetColor(_baseColor, Color.Lerp(_renderer.material.GetColor(_baseColor), _targetColor, Time.deltaTime * (1 / animationTime)));
             }
             else // old standard rendering pipline
             {
-                _renderer.material.color = Color.Lerp(_renderer.material.color, _targetColor, Time.deltaTime * (1 / animationTime));
+                //_renderer.material.color = Color.Lerp(_renderer.material.color, _targetColor, Time.deltaTime * (1 / animationTime));
             }
+            */
 
             
 
@@ -154,6 +170,24 @@ namespace Tobii.XR.Examples.GettingStarted
                 {
                     tTime = Time.deltaTime;
                     PointCounterManager.gazeDurLeftHandCanvas += tTime;
+
+                }
+                else if (gameObject.tag == "FoxRigid")
+                {
+                    tTime = Time.deltaTime;
+                    PointCounterManager.gazeDurFoxRigid += tTime;
+
+                }
+                else if (gameObject.tag == "FoxMoving")
+                {
+                    tTime = Time.deltaTime;
+                    PointCounterManager.gazeDurFoxMoving += tTime;
+
+                }
+                else if (gameObject.tag == "Terrain")
+                {
+                    tTime = Time.deltaTime;
+                    PointCounterManager.gazeDurTerrain += tTime;
 
                 }
 

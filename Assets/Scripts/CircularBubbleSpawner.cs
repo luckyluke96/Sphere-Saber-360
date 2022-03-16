@@ -35,6 +35,7 @@ public class CircularBubbleSpawner : MonoBehaviour
     private int bubbleCounter = 0;
     private float time;
     private float gameDur = 60; //duration of game in seconds
+    private float circGameDur;
 
 
     // Start is called before the first frame update
@@ -74,6 +75,11 @@ public class CircularBubbleSpawner : MonoBehaviour
             hintSpawnDeg = deg;
             rigDegNotInit = false;
         }
+    }
+
+    void getCameraDirectionDeg()
+    {
+
     }
 
     // Update is called once per 
@@ -196,6 +202,8 @@ public class CircularBubbleSpawner : MonoBehaviour
                 bubbleCounter++;
                 count++;
                 lastShotHappend = true;
+
+                
             }
         }
 
@@ -210,6 +218,9 @@ public class CircularBubbleSpawner : MonoBehaviour
     private void FixedUpdate()
     {
         time += Time.deltaTime;
+        circGameDur += Time.deltaTime;
+        PointCounterManager.durCircularGame += circGameDur;
+        Debug.Log("circGameDur: " + circGameDur);
     }
 
     void spawnHint()

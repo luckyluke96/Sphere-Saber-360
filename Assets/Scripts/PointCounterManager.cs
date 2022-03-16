@@ -21,6 +21,11 @@ public class PointCounterManager : MonoBehaviour
     public static float gazeDurRedSphere;
     public static float gazeDurYellowSphere;
     public static float gazeDurLeftHandCanvas;
+    public static float gazeDurFoxMoving;
+    public static float gazeDurFoxRigid;
+    public static float gazeDurTerrain;
+
+    public static float timeToRecFox;
 
     public static int gazeCountBlueCanvas;
     public static int gazeCountYellowCanvas;
@@ -29,6 +34,11 @@ public class PointCounterManager : MonoBehaviour
     public static int gazeCountRedSphere;
     public static int gazeCountYellowSphere;
     public static int gazeCountLeftHandCanvas;
+    public static int gazeCountFoxMoving;
+    public static int gazeCountFoxRigid;
+    public static int gazeCountTerrain;
+
+    public static float durCircularGame;
     //public int points;
 
     // Start is called before the first frame update
