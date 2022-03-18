@@ -22,6 +22,7 @@ TagManager:
   - Terrain
   - FoxMoving
   - FoxRigid
+  - Lamp
   layers:
   - Default
   - TransparentFX

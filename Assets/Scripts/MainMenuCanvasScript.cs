@@ -2,21 +2,63 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using PathCreation;
 
-public class MainMenuCanvasScript : MonoBehaviour
+namespace PathCreation.Examples
 {
-    public void StartLevelCircular()
-    {
-        SceneManager.LoadScene(1);
-    }
 
-    public void StartLevelRandom()
+    public class MainMenuCanvasScript : MonoBehaviour
     {
-        SceneManager.LoadScene(2);
-    }
+        public PathCreator pathCreator;
+        public EndOfPathInstruction endOfPathInstruction;
+        public GameObject pathTraveller;
+        public float speed = 1;
+        public GameObject MenuCanvas;
 
-    public void ExitGame()
-    {
-        Application.Quit();
+        float distanceTravelled;
+        bool runPath = false;
+
+        public void StartLevelCircular()
+        {
+            SceneManager.LoadScene(1);
+        }
+
+        public void StartLevelRandom()
+        {
+            SceneManager.LoadScene(2);
+        }
+
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
+
+        public void runFox()
+        {
+            
+            runPath = true;
+            Instantiate(MenuCanvas);
+            GameObject.Find("Fox").GetComponent<Animator>().Play("Base Layer");
+        }
+
+        void OnPathChanged()
+        {
+            distanceTravelled = pathCreator.path.GetClosestDistanceAlongPath(pathTraveller.transform.position);
+        }
+
+        private void Update()
+        {
+            if ((pathCreator != null) && runPath)
+            {
+                distanceTravelled += speed * Time.deltaTime;
+                pathTraveller.transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
+                pathTraveller.transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
+            }
+        }
+
+        private void FixedUpdate()
+        {
+            
+        }
     }
 }

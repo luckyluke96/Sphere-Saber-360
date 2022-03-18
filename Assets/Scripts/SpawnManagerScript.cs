@@ -15,7 +15,8 @@ public class SpawnManagerScript : MonoBehaviour
         Instantiate(CircularBubbleSpawner);
 
         float deg = RigSpawner.rigDegree;
-        // Debug.Log("manager deg: " + deg);
+        PointCounterManager.rigDeg = deg;
+        // Debug.Log("Rig spawn deg: " + deg);
         float angle = (deg * Mathf.PI * 2f / 360);
         Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
 

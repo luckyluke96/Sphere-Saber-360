@@ -203,8 +203,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8376497706215791998}
-        m_TargetAssemblyTypeName: MainMenuCanvasScript, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_TargetAssemblyTypeName: PathCreation.Examples.MainMenuCanvasScript, Assembly-CSharp
+        m_MethodName: StartLevelRandom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -336,8 +336,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8376497706215791998}
-        m_TargetAssemblyTypeName: MainMenuCanvasScript, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_TargetAssemblyTypeName: PathCreation.Examples.MainMenuCanvasScript, Assembly-CSharp
+        m_MethodName: StartLevelCircular
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -454,8 +454,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8376497706215791993}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.727}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.799}
   m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_Children:
   - {fileID: 8364575950985273681}
@@ -463,10 +463,10 @@ RectTransform:
   - {fileID: 8376497706659181890}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.289}
+  m_AnchoredPosition: {x: 0, y: 1.2890015}
   m_SizeDelta: {x: 483.5, y: 383.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8376497706215791997
@@ -512,7 +512,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8376497706215791999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,6 +542,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3a18e70de5d41228a57fc59973f4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathCreator: {fileID: 0}
+  endOfPathInstruction: 0
+  pathTraveller: {fileID: 0}
+  speed: 1
+  MenuCanvas: {fileID: 0}
 --- !u!114 &8376497706215791987
 MonoBehaviour:
   m_ObjectHideFlags: 0

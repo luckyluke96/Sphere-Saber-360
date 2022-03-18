@@ -85,6 +85,11 @@ namespace Tobii.XR.Examples.GettingStarted
                     PointCounterManager.gazeCountTerrain += 1;
 
                 }
+                else if (gameObject.tag == "Lamp")
+                {
+                    PointCounterManager.gazeCountLamp += 1;
+
+                }
 
             }
             //If this object lost focus, fade the object's color to it's original color
@@ -188,6 +193,12 @@ namespace Tobii.XR.Examples.GettingStarted
                 {
                     tTime = Time.deltaTime;
                     PointCounterManager.gazeDurTerrain += tTime;
+
+                }
+                else if (gameObject.tag == "Lamp")
+                {
+                    tTime = Time.deltaTime;
+                    PointCounterManager.gazeDurLamp += tTime;
 
                 }
 
