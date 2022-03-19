@@ -55,7 +55,7 @@ public class DataCollection : MonoBehaviour
                 "Gaze_Count_Blue_Canvas," + "Gaze_Count_Yellow_Canvas," + "Gaze_Count_Pointer_Canvas," +
                 "Gaze_Count_Blue_Sphere," + "Gaze_Count_Red_Sphere," + "Gaze_Count_Yellow_Sphere," +
                 "GazeCount_FoxMoving," + "Gaze_Count_Fox_Rigid," + "Gaze_Count_Terrain," + "Gaze_Count_Lamp," +  
-                "TimeToRecFox," +
+                "TimeToRecFox," + "TimeToFirstFixBlueCanvas," +
                 "Circular_Game_Dur," + "\n";
             string logString = DateTime.Now + "," + PointCounterManager.points + "," + PointCounterManager.rigDeg + 
                 "," + PointCounterManager.gazeDurBlueCanvas + "," + PointCounterManager.gazeDurYellowCanvas + "," + PointCounterManager.gazeDurPointCounterCanvas + "," + PointCounterManager.gazeDurLeftHandCanvas +
@@ -64,7 +64,7 @@ public class DataCollection : MonoBehaviour
                 "," + PointCounterManager.gazeCountBlueCanvas + "," + PointCounterManager.gazeCountYellowCanvas + "," + PointCounterManager.gazeCountPointCounterCanvas +
                 "," + PointCounterManager.gazeCountBlueSphere + "," + PointCounterManager.gazeCountRedSphere + "," + PointCounterManager.gazeCountYellowSphere +
                 "," + PointCounterManager.gazeCountFoxMoving + "," + PointCounterManager.gazeCountFoxRigid + "," + PointCounterManager.gazeCountTerrain + "," + PointCounterManager.gazeCountLamp +
-                "," + PointCounterManager.timeToRecFox +
+                "," + PointCounterManager.timeToRecFox + "," + PointCounterManager.timeToFirstFixBlueCanvas + 
                 "," + PointCounterManager.durCircularGame;
 
             
