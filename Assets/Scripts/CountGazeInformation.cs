@@ -21,6 +21,7 @@ namespace Tobii.XR.Examples.GettingStarted
         private System.DateTime startTime;
         private System.DateTime endTime;
         private float spawnDur;
+        private bool firstGaze = true;
 
         //The method of the "IGazeFocusable" interface, which will be called when this object receives or loses focus
         public void GazeFocusChanged(bool hasFocus)
@@ -40,18 +41,31 @@ namespace Tobii.XR.Examples.GettingStarted
                 else if (gameObject.tag == "HintCanvasBlue")
                 {
                     PointCounterManager.gazeCountBlueCanvas += 1;
-                    PointCounterManager.timeToFirstFixBlueCanvas = spawnDur;
+
+                    if (firstGaze)
+                    {
+                        PointCounterManager.timeToFirstFixBlueCanvas = spawnDur;
+                        firstGaze = false;
+                    }
+                   
                     
                 }
                 else if (gameObject.tag == "HintCanvasYellow")
                 {
                     PointCounterManager.gazeCountYellowCanvas += 1;
 
+                    if (firstGaze)
+                    {
+                        PointCounterManager.timeToFirstFixYellowCanvas = spawnDur;
+                        firstGaze = false;
+                    }
+
                 }
                 else if (gameObject.tag == "PointCounterCanvas")
                 {
                     PointCounterManager.gazeCountPointCounterCanvas += 1;
 
+                    
                 }
                 else if (gameObject.tag == "BlueSphere")
                 {
