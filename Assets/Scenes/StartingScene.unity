@@ -3837,7 +3837,7 @@ MonoBehaviour:
   pathCreator: {fileID: 1438571444}
   endOfPathInstruction: 0
   pathTraveller: {fileID: 343047243}
-  speed: 1
+  speed: 1.5
   MenuCanvas: {fileID: 8376497706215791993, guid: 2944d4fc082c34883be3a9df5df664f2, type: 3}
 --- !u!114 &8217631443862287991
 MonoBehaviour:

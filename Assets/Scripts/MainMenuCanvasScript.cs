@@ -38,21 +38,45 @@ namespace PathCreation.Examples
             
             runPath = true;
             Instantiate(MenuCanvas);
-            GameObject.Find("Fox").GetComponent<Animator>().Play("Base Layer");
+            GameObject.Find("Fox").GetComponent<Animator>().SetBool("isRunning", true);
+            GameObject.Find("Fox").GetComponent<Animator>().SetBool("isSitting", false);
+        }
+
+        public void Start()
+        {
+            
         }
 
         void OnPathChanged()
         {
             distanceTravelled = pathCreator.path.GetClosestDistanceAlongPath(pathTraveller.transform.position);
+            // Debug.Log(distanceTravelled);
         }
 
         private void Update()
         {
+            /* DEBUGGING
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                Debug.Log("Tab");
+                runFox();
+
+                
+            }
+            */
+
+            Debug.Log(distanceTravelled);
             if ((pathCreator != null) && runPath)
             {
                 distanceTravelled += speed * Time.deltaTime;
-                pathTraveller.transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
-                pathTraveller.transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
+                pathTraveller.transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
+                pathTraveller.transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
+            }
+
+            if(distanceTravelled > 19f)
+            {
+                GameObject.Find("Fox").GetComponent<Animator>().SetBool("isRunning", false);
+                GameObject.Find("Fox").GetComponent<Animator>().SetBool("isSitting", true);
             }
         }
 
@@ -60,5 +84,7 @@ namespace PathCreation.Examples
         {
             
         }
+
+        
     }
 }
