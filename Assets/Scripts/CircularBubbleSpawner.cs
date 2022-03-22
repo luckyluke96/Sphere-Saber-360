@@ -32,6 +32,7 @@ public class CircularBubbleSpawner : MonoBehaviour
     private float radius = 6f;
     private bool lastShotHappend = false;
     private float gameDurationPerimeter = 720;
+    private float gameDurationPerimeter180 = 180;
     private int numColors = 1;
     private int bubbleCounter = 0;
     private float time;
@@ -56,9 +57,17 @@ public class CircularBubbleSpawner : MonoBehaviour
         {
             InvokeRepeating("ShootBubblesGuide", 0f, 2f);
         }
-        else if (currentSceneName == "LevelRandomSpawn")
+        else if (currentSceneName == "LevelRandom")
         {
             InvokeRepeating("ShootBubblesRandom", 0f, 2f);
+        }
+        else if (currentSceneName == "LevelCircularSpawn180")
+        {
+            InvokeRepeating("ShootBubblesGuide180", 0f, 2f);
+        }
+        else if (currentSceneName == "LevelRandom180")
+        {
+            InvokeRepeating("ShootBubblesRandom180", 0f, 2f);
         }
 
     }
@@ -168,9 +177,84 @@ public class CircularBubbleSpawner : MonoBehaviour
         }
     }
 
+    void ShootBubblesGuide180()
+    {
+        InitDeg();
+        getCameraDirectionDeg();
+
+        if (deg <= (gameDurationPerimeter180 + rigRot))
+        {
+
+
+            deg += Random.Range(-30f, 60f);
+
+            if (count >= 3 && (deg < (increase + 60)))
+            {
+                deg += 60;
+                count = 0;
+                increase = deg;
+            }
+
+            angle = (deg * Mathf.PI * 2f / 360);
+
+
+            //Debug.Log("deg: " + deg);
+
+            Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
+            GameObject ball = Instantiate(spheres[Random.Range(0, numColors)], newPos, Quaternion.identity);
+
+            Debug.Log("deg: " + deg + "hintSpawndeg: " + hintSpawnDeg);
+            // spawn Hint Canvas if possible
+            if (deg >= (hintSpawnDeg + 90))
+            {
+                spawnHint();
+            }
+
+            bubbleCounter++;
+            count++;
+
+        }
+        else
+        {
+            if (!lastShotHappend)
+            {
+                deg += Random.Range(-30f, 60f);
+
+                if (count >= 3 && (deg < (increase + 60)))
+                {
+                    deg += 60;
+                    count = 0;
+                    increase = deg;
+                }
+
+                angle = (deg * Mathf.PI * 2f / 360);
+
+
+                //Debug.Log("deg: " + deg);
+
+                Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
+                GameObject lastBall = Instantiate(lastSphere, newPos, Quaternion.identity);
+
+                if (deg >= (hintSpawnDeg + 90))
+                {
+                    spawnHint();
+                }
+
+                bubbleCounter++;
+                count++;
+                lastShotHappend = true;
+            }
+
+
+
+
+        }
+    }
+
     // bubbles spawn randomly in 360 degree
     void ShootBubblesRandom()
     {
+        
         deg = Random.Range(0, 360);
         angle = (deg * Mathf.PI * 2f / 360);
 
@@ -238,8 +322,9 @@ public class CircularBubbleSpawner : MonoBehaviour
     {
         float camDeg = getCameraDirectionDeg();
         angle = (camDeg * Mathf.PI * 2f / 360);
+        float hintRadius = radius + 1;
 
-        Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
+        Vector3 newPos = new Vector3(Mathf.Sin(angle) * hintRadius, 2f, Mathf.Cos(angle) * hintRadius);
 
             if(numColors == 1)
             {
@@ -267,8 +352,62 @@ public class CircularBubbleSpawner : MonoBehaviour
         
     }
 
+    void ShootBubblesRandom180()
+    {
+        InitDeg();
+        getCameraDirectionDeg();
+
+        if (time <= gameDur)
+        {
+            deg += Random.Range(-90, 90);
+            angle = (deg * Mathf.PI * 2f / 360);
+
+            Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
+            GameObject ball = Instantiate(spheres[Random.Range(0, numColors)], newPos, Quaternion.identity);
 
 
-    
+            if (time > (hintSpawnTime + hintFreq))
+            {
+                spawnHint();
+                hintSpawnTime = time;
+            }
+
+            bubbleCounter++;
+            count++;
+        }
+
+        else 
+        {
+            if (!lastShotHappend)
+            {
+                deg += Random.Range(-30f, 30f);
+
+                if (count >= 3 && (deg < (increase + 60)))
+                {
+                    deg += 60;
+                    count = 0;
+                    increase = deg;
+                }
+
+                angle = (deg * Mathf.PI * 2f / 360);
+
+
+                //Debug.Log("deg: " + deg);
+
+                Vector3 lastPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
+                GameObject lastBall = Instantiate(lastSphere, lastPos, Quaternion.identity);
+
+
+
+                bubbleCounter++;
+                count++;
+                lastShotHappend = true;
+
+
+            }
+        }
+
+
+    }
 
 }

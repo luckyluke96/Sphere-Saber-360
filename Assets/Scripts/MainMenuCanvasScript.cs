@@ -18,15 +18,28 @@ namespace PathCreation.Examples
         float distanceTravelled;
         bool runPath = false;
 
-        public void StartLevelCircular()
+        public void StartLevelCircular180()
         {
             SceneManager.LoadScene(1);
         }
 
-        public void StartLevelRandom()
+        public void StartLevelCircular360()
         {
             SceneManager.LoadScene(2);
         }
+
+        public void StartLevelRandom180()
+        {
+            SceneManager.LoadScene(3);
+        }
+
+        public void StartLevelRandom()
+        {
+            SceneManager.LoadScene(4);
+        }
+
+        
+
 
         public void ExitGame()
         {
