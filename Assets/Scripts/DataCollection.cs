@@ -48,7 +48,7 @@ public class DataCollection : MonoBehaviour
                          HighScore.Instance.score + "\t" + headMovement + "\t" + rightHandMovement + "\t" + leftHandMovement + "\t" + rightHandMovementAboveHead + "\t" + rightHandAboveHeadTime + "\t" + leftHandMovementAboveHead + "\t" + leftHandAboveHeadTime
                          + "\t" + TimePressureStudyLogic.Instance.currentMode.ToString() + "\t" + GameDataManager.Instance.amountOfFinishedBubbleRounds + "\t" + GameDataManager.Instance.amountOfFinishedBubbleRoundsThisRound + "\t" + Configuration.Instance.resetDistanceBetweenBubbles + "\t" + TimePressureStudyLogic.Instance.currentCondition.ToString() + "\t" + ((float) Configuration.Instance.levelLength / GameDataManager.Instance.amountOfFinishedBubbleRounds);
             */
-            string columnString = "DateTime," + "Points," + "Rig_Deg," +
+            string columnString = "DateTime," + "Points," + "Game_Level," + "Rig_Deg," +
                 "Gaze_Dur_Blue_Canvas," + "Gaze_Dur_Yellow_Canvas," + "Gaze_Point_Counter_Canvas," + "Gaze_Dur_LeftHand_Canvas," + 
                 "Gaze_Dur_Total,"  + "Gaze_Dur_RedSphere," + "Gaze_Dur_BlueSphere," + "Gaze_Dur_YellowSphere," +
                 "Gaze_Dur_FoxMoving," + "Gaze_Dur_FoxRigid," + "Gaze_Dur_Terrain," + "Gaze_Dur_Lamp," +  
@@ -57,7 +57,7 @@ public class DataCollection : MonoBehaviour
                 "GazeCount_FoxMoving," + "Gaze_Count_Fox_Rigid," + "Gaze_Count_Terrain," + "Gaze_Count_Lamp," +  
                 "TimeToRecFox," + "TimeToFirstFixBlueCanvas," + "TimeToFirstFixYellowCanvas" +
                 "Circular_Game_Dur," + "\n";
-            string logString = DateTime.Now + "," + PointCounterManager.points + "," + PointCounterManager.rigDeg + 
+            string logString = DateTime.Now + "," + PointCounterManager.points + "," + PointCounterManager.gameLevel + "," + PointCounterManager.rigDeg + 
                 "," + PointCounterManager.gazeDurBlueCanvas + "," + PointCounterManager.gazeDurYellowCanvas + "," + PointCounterManager.gazeDurPointCounterCanvas + "," + PointCounterManager.gazeDurLeftHandCanvas +
                 "," + PointCounterManager.gazeDur + "," + PointCounterManager.gazeDurRedSphere + "," + PointCounterManager.gazeDurBlueSphere + "," + PointCounterManager.gazeDurYellowSphere +
                 "," + PointCounterManager.gazeDurFoxMoving + "," + PointCounterManager.gazeDurFoxRigid + "," + PointCounterManager.gazeDurTerrain + "," + PointCounterManager.gazeDurLamp + 

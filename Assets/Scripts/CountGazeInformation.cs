@@ -3,6 +3,7 @@
 using Tobii.G2OM;
 using UnityEngine;
 
+
 namespace Tobii.XR.Examples.GettingStarted
 {
     //Monobehaviour which implements the "IGazeFocusable" interface, meaning it will be called on when the object receives focus

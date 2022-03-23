@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class PointCounterManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PointCounterManager : MonoBehaviour
     public static float points;
     public static float timer;
     public static float rigDeg;
+    public static string gameLevel;
 
     public static float gazeDur;
     public static float gazeDurBlueCanvas;
@@ -30,7 +32,7 @@ public class PointCounterManager : MonoBehaviour
     public static float timeToRecFox;
     public static float timeToFirstFixBlueCanvas;
     public static float timeToFirstFixYellowCanvas;
-
+    
     public static int gazeCountBlueCanvas;
     public static int gazeCountYellowCanvas;
     public static int gazeCountPointCounterCanvas;
@@ -52,7 +54,24 @@ public class PointCounterManager : MonoBehaviour
         // PointCounterText = GameObject.Find("PointCounterText").GetComponent<Text>();
         // PointCounterText.text = "Punkte: ";
 
-        
+        if (SceneManager.GetActiveScene().name == "LevelCircularSpawn")
+        {
+            gameLevel = "LevelCircularSpawn";
+        }
+        else if (SceneManager.GetActiveScene().name == "LevelRandom")
+        {
+            gameLevel = "LevelRandom";
+        }
+        else if (SceneManager.GetActiveScene().name == "LevelCircularSpawn180")
+        {
+            gameLevel = "LevelCircularSpawn180";
+        }
+        else if (SceneManager.GetActiveScene().name == "LevelRandom180")
+        {
+            gameLevel = "LevelRandom180";
+        }
+
+
 
 
     }
