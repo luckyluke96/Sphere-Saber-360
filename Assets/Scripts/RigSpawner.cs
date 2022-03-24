@@ -10,7 +10,8 @@ public class RigSpawner : MonoBehaviour
     void Start()
     {
         Instantiate(spawnManager);
-        rigDegree = Random.Range(0, 360);
+        // rigDegree = Random.Range(0, 360);
+        rigDegree = 0;
         transform.Rotate(0f, rigDegree, 0f);
         Debug.Log("rig spawner deg: "+ rigDegree);
     }

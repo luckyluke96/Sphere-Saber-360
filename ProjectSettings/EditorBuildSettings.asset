@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartingScene.unity
+    path: Assets/Scenes/StartingSceneFox.unity
     guid: f76d00c23f5f54181b61ea5bbc5506b0
   - enabled: 1
     path: Assets/Scenes/LevelCircularSpawn180.unity

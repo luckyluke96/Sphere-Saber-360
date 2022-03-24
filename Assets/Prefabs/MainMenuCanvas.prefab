@@ -157,7 +157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Start Level 2 (360\xB0 drehend)\n"
+  m_Text: "Starte Level 2 (360\xB0 drehend)\n"
 --- !u!1 &3419390174005077546
 GameObject:
   m_ObjectHideFlags: 0

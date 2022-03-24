@@ -39,6 +39,7 @@ public class CircularBubbleSpawner : MonoBehaviour
     private float gameDur = 60; //duration of game in seconds
     private float circGameDur;
     private bool maxHintsSpawned = false;
+    private float rigDegree;
 
 
     // Start is called before the first frame update
@@ -83,6 +84,7 @@ public class CircularBubbleSpawner : MonoBehaviour
             // Debug.Log("deg from rigspawner: " + rigRot);
 
             deg += rigRot;
+            rigDegree = deg;
             hintSpawnDeg = deg;
             rigDegNotInit = false;
         }
@@ -355,12 +357,16 @@ public class CircularBubbleSpawner : MonoBehaviour
     void ShootBubblesRandom180()
     {
         InitDeg();
+        
         getCameraDirectionDeg();
+
+        float localDeg = 0;
 
         if (time <= gameDur)
         {
-            deg += Random.Range(-90, 90);
-            angle = (deg * Mathf.PI * 2f / 360);
+            localDeg = rigDegree + Random.Range(-90, 90);
+            Debug.Log("deg: " + localDeg);
+            angle = (localDeg * Mathf.PI * 2f / 360);
 
             Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
             GameObject ball = Instantiate(spheres[Random.Range(0, numColors)], newPos, Quaternion.identity);
@@ -380,16 +386,16 @@ public class CircularBubbleSpawner : MonoBehaviour
         {
             if (!lastShotHappend)
             {
-                deg += Random.Range(-30f, 30f);
+                localDeg = rigDegree + Random.Range(-30, 30);
 
-                if (count >= 3 && (deg < (increase + 60)))
+                if (count >= 3 )
                 {
-                    deg += 60;
+                    localDeg += 60;
                     count = 0;
-                    increase = deg;
+                    increase = localDeg;
                 }
 
-                angle = (deg * Mathf.PI * 2f / 360);
+                angle = (localDeg * Mathf.PI * 2f / 360);
 
 
                 //Debug.Log("deg: " + deg);
