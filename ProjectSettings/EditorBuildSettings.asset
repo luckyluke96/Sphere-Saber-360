@@ -6,26 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartingSceneFox.unity
-    guid: f76d00c23f5f54181b61ea5bbc5506b0
+    path: Assets/Scenes/StartingSceneBasic.unity
+    guid: 4800062b0a1704308a0c90d0b4b6e1b4
   - enabled: 1
     path: Assets/Scenes/LevelCircularSpawn180.unity
     guid: 4a48804ad721644d0be92d5a48224ce6
   - enabled: 1
     path: Assets/Scenes/LevelCircularSpawn.unity
     guid: eddc08c9ac3cf4520a245080ae854d97
-  - enabled: 0
-    path: Assets/Samples/Tobii XR SDK/3.0.1/Developer Tools/Example_DevTools.unity
-    guid: 3ac82b1e304123e44943e79a20128bfa
-  - enabled: 0
-    path: Assets/Scenes/LevelRandomSpawn.unity
-    guid: 933ea6368137f4f9492e505456f4e1b0
   - enabled: 1
     path: Assets/Scenes/LevelRandom180.unity
     guid: b1737aa44f98b4a959257aebd822637a
   - enabled: 1
     path: Assets/Scenes/LevelRandom.unity
     guid: f61b3483fa2d34e2a839f4aad9aa0787
+  - enabled: 1
+    path: Assets/Scenes/StartingSceneFox.unity
+    guid: f76d00c23f5f54181b61ea5bbc5506b0
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: ec14cb0e035e342b8a3b1c183459ecd1, type: 2}
     Unity.XR.PXR.Settings: {fileID: 11400000, guid: f6f796cebba144485a9b6cb01114ca78, type: 2}
