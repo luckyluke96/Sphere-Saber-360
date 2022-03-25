@@ -38,7 +38,10 @@ namespace PathCreation.Examples
             SceneManager.LoadScene(4);
         }
 
-        
+        public void StartLevelWOHints()
+        {
+            SceneManager.LoadScene(5);
+        }
 
 
         public void ExitGame()

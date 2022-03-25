@@ -44,28 +44,39 @@ public class Saber : MonoBehaviour
                 {
                     // pointCounterManager.GetComponent<PointCounterManager>().points -= 20;
                     PointCounterManager.points -= 20f;
+
+                    if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
+                    {
+                        PointCounterManager.points += 150f;
+                    }
+
                 }
                 else if (hit.transform.tag == "RedSphere")
                 {
                     PointCounterManager.points += 20f;
 
-                    if (CircularBubbleSpawner.leftHandBonus)
+                    if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {
-                        PointCounterManager.points += 20f;
+                        PointCounterManager.points += 150f;
                     }
                 }
                 else if (hit.transform.tag == "YellowSphere")
                 {
                     PointCounterManager.points += 100f;
 
-                    if (CircularBubbleSpawner.leftHandBonus)
+                    if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {
-                        PointCounterManager.points += 100f;
+                        PointCounterManager.points += 150f;
                     }
                 }
                 else if (hit.transform.tag == "LastSphere")
                 {
                     PointCounterManager.points += 20f;
+
+                    if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
+                    {
+                        PointCounterManager.points += 150f;
+                    }
                     //StartCoroutine(wait(3));
                     //Instantiate(backToMenuCanvas);
 

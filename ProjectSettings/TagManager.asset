@@ -23,6 +23,7 @@ TagManager:
   - FoxMoving
   - FoxRigid
   - Lamp
+  - Left
   layers:
   - Default
   - TransparentFX

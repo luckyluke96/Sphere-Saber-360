@@ -92,7 +92,7 @@ public class PointCounterManager : MonoBehaviour
         // timer += Time.deltaTime;
         // TimerText.text = "time: " + timer.ToString() + "s";
 
-        GameObject.Find("TimerText").GetComponent<Text>().text = "Terr Dur: " + gazeDurTerrain;
+        // GameObject.Find("TimerText").GetComponent<Text>().text = "Terr Dur: " + gazeDurTerrain;
         
         // Debug.Log("Sign text: " + PointCounterText.text);
 
