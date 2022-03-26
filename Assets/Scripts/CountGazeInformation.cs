@@ -108,6 +108,11 @@ namespace Tobii.XR.Examples.GettingStarted
                     PointCounterManager.gazeCountLamp += 1;
 
                 }
+                else if (gameObject.tag == "Sparrow")
+                {
+                    PointCounterManager.gazeCountSparrow += 1;
+
+                }
 
             }
             //If this object lost focus, fade the object's color to it's original color
@@ -221,6 +226,12 @@ namespace Tobii.XR.Examples.GettingStarted
                 {
                     tTime = Time.deltaTime;
                     PointCounterManager.gazeDurLamp += tTime;
+
+                }
+                else if (gameObject.tag == "Sparrow")
+                {
+                    tTime = Time.deltaTime;
+                    PointCounterManager.gazeDurSparrow += tTime;
 
                 }
 
