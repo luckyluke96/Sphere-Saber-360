@@ -44,7 +44,7 @@ public class Saber : MonoBehaviour
                 {
                     // pointCounterManager.GetComponent<PointCounterManager>().points -= 20;
                     PointCounterManager.points -= 20f;
-                    PointCounterManager.countHitBlue++
+                    PointCounterManager.countHitBlue++;
 
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {
@@ -56,7 +56,7 @@ public class Saber : MonoBehaviour
                 else if (hit.transform.tag == "RedSphere")
                 {
                     PointCounterManager.points += 20f;
-                    PointCounterManager.countHitRed++
+                    PointCounterManager.countHitRed++;
 
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {
@@ -67,7 +67,7 @@ public class Saber : MonoBehaviour
                 else if (hit.transform.tag == "YellowSphere")
                 {
                     PointCounterManager.points += 100f;
-                    PointCounterManager.countHitYellow++
+                    PointCounterManager.countHitYellow++;
 
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {
@@ -78,7 +78,7 @@ public class Saber : MonoBehaviour
                 else if (hit.transform.tag == "LastSphere")
                 {
                     PointCounterManager.points += 20f;
-                    PointCounterManager.countHitRed++
+                    PointCounterManager.countHitRed++;
 
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {

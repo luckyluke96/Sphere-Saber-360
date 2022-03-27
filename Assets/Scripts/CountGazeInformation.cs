@@ -155,8 +155,8 @@ namespace Tobii.XR.Examples.GettingStarted
             if (focus)
             {
 
-                // tTime = Time.deltaTime;
-                // PointCounterManager.gazeDur += tTime;
+                tTime = Time.deltaTime;
+                PointCounterManager.gazeDur += tTime;
 
                 if (gameObject.tag == "TestCube")
                 {

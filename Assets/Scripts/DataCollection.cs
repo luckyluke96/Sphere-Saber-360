@@ -56,8 +56,8 @@ public class DataCollection : MonoBehaviour
                 "Gaze_Count_Blue_Canvas;" + "Gaze_Count_Yellow_Canvas;" + "Gaze_Count_Pointer_Canvas;" +
                 "Gaze_Count_Blue_Sphere;" + "Gaze_Count_Red_Sphere;" + "Gaze_Count_Yellow_Sphere;" +
                 "GazeCount_FoxMoving;" + "Gaze_Count_Fox_Rigid;" + "Gaze_Count_Terrain;" + "Gaze_Count_Lamp;" +
-                "Gaze_Counter_Sparrow" +
-                "TimeToRecFox;" + "TimeToFirstFixBlueCanvas;" + "TimeToFirstFixYellowCanvas" +
+                "Gaze_Counter_Sparrow;" +
+                "TimeToRecFox;" + "TimeToFirstFixBlueCanvas;" + "TimeToFirstFixYellowCanvas;" +
                 "Circular_Game_Dur;" +
                 "Hit_Red_Counter;" + "Hit_Blue_Counter;" + "Hit_Yellow_Counter;" + "Hit_Left;" +
                 "Spawned_Red;" + "Spawned_Blue;" + "Spawned_Yellow;" + "Spawned_Left" + "\n";
@@ -73,7 +73,7 @@ public class DataCollection : MonoBehaviour
                 ";" + PointCounterManager.timeToRecFox + ";" + PointCounterManager.timeToFirstFixBlueCanvas + ";" + PointCounterManager.timeToFirstFixYellowCanvas +
                 ";" + PointCounterManager.durCircularGame +
                 ";" + PointCounterManager.countHitRed + ";" + PointCounterManager.countHitBlue + ";" + PointCounterManager.countHitYellow + ";" + PointCounterManager.countHitLeftBonus +
-                ";" + PointCounterManager.countSpawnedRed + ";" + PointCounterManager.countSpawnedBlue + ";" + PointCounterManager.countSpawnedYellow + ";" + PointCounterManager.countSpawnedLeftBonus + ";" + "\n";
+                ";" + PointCounterManager.countSpawnedRed + ";" + PointCounterManager.countSpawnedBlue + ";" + PointCounterManager.countSpawnedYellow + ";" + PointCounterManager.countSpawnedLeftBonus;
 
 
             // add column names only when file is created the first time -> das hier überschreibt alles
