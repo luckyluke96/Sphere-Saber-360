@@ -132,9 +132,24 @@ public class CircularBubbleSpawner : MonoBehaviour
 
 
             //Debug.Log("deg: " + deg);
+            int bubbleType = Random.Range(0, numColors);
+            if(bubbleType == 0)
+            {
+                PointCounterManager.countSpawnedRed++;
+            }
+            else if(bubbleType == 1)
+            {
+                PointCounterManager.countSpawnedBlue++;
+            }
+            else if(bubbleType == 2)
+            {
+                PointCounterManager.countSpawnedYellow++;
+            }
+            if (leftHandBonus) { PointCounterManager.countSpawnedLeftBonus++; };
 
             Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
-            GameObject ball = Instantiate(spheres[Random.Range(0, numColors)], newPos, Quaternion.identity);
+            GameObject ball = Instantiate(spheres[bubbleType], newPos, Quaternion.identity);
+
 
             Debug.Log("deg: " + deg + "hintSpawndeg: " + hintSpawnDeg);
             // spawn Hint Canvas if possible
@@ -164,6 +179,8 @@ public class CircularBubbleSpawner : MonoBehaviour
 
 
                 //Debug.Log("deg: " + deg);
+                PointCounterManager.countSpawnedRed++;
+                if (leftHandBonus) { PointCounterManager.countSpawnedLeftBonus++; };
 
                 Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
                 GameObject lastBall = Instantiate(lastSphere, newPos, Quaternion.identity);
@@ -204,11 +221,25 @@ public class CircularBubbleSpawner : MonoBehaviour
 
             angle = (deg * Mathf.PI * 2f / 360);
 
+            int bubbleType = Random.Range(0, numColors);
+            if (bubbleType == 0)
+            {
+                PointCounterManager.countSpawnedRed++;
+            }
+            else if (bubbleType == 1)
+            {
+                PointCounterManager.countSpawnedBlue++;
+            }
+            else if (bubbleType == 2)
+            {
+                PointCounterManager.countSpawnedYellow++;
+            }
+            if (leftHandBonus) { PointCounterManager.countSpawnedLeftBonus++; };
 
             //Debug.Log("deg: " + deg);
 
             Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
-            GameObject ball = Instantiate(spheres[Random.Range(0, numColors)], newPos, Quaternion.identity);
+            GameObject ball = Instantiate(spheres[bubbleType], newPos, Quaternion.identity);
 
             Debug.Log("deg: " + deg + "hintSpawndeg: " + hintSpawnDeg);
             // spawn Hint Canvas if possible
@@ -238,6 +269,8 @@ public class CircularBubbleSpawner : MonoBehaviour
 
 
                 //Debug.Log("deg: " + deg);
+                PointCounterManager.countSpawnedRed++;
+                if (leftHandBonus) { PointCounterManager.countSpawnedLeftBonus++; };
 
                 Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
                 GameObject lastBall = Instantiate(lastSphere, newPos, Quaternion.identity);
@@ -265,8 +298,23 @@ public class CircularBubbleSpawner : MonoBehaviour
         deg = Random.Range(0, 360);
         angle = (deg * Mathf.PI * 2f / 360);
 
+        int bubbleType = Random.Range(0, numColors);
+        if (bubbleType == 0)
+        {
+            PointCounterManager.countSpawnedRed++;
+        }
+        else if (bubbleType == 1)
+        {
+            PointCounterManager.countSpawnedBlue++;
+        }
+        else if (bubbleType == 2)
+        {
+            PointCounterManager.countSpawnedYellow++;
+        }
+        if (leftHandBonus) { PointCounterManager.countSpawnedLeftBonus++; };
+
         Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
-        GameObject ball = Instantiate(spheres[Random.Range(0, numColors)], newPos, Quaternion.identity);
+        GameObject ball = Instantiate(spheres[bubbleType], newPos, Quaternion.identity);
 
 
         if (time > (hintSpawnTime + hintFreq))
@@ -295,6 +343,8 @@ public class CircularBubbleSpawner : MonoBehaviour
 
 
                 //Debug.Log("deg: " + deg);
+                PointCounterManager.countSpawnedRed++;
+                if (leftHandBonus) { PointCounterManager.countSpawnedLeftBonus++; };
 
                 Vector3 lastPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
                 GameObject lastBall = Instantiate(lastSphere, lastPos, Quaternion.identity);
@@ -328,8 +378,24 @@ public class CircularBubbleSpawner : MonoBehaviour
             Debug.Log("deg: " + localDeg);
             angle = (localDeg * Mathf.PI * 2f / 360);
 
+            int bubbleType = Random.Range(0, numColors);
+            if (bubbleType == 0)
+            {
+                PointCounterManager.countSpawnedRed++;
+            }
+            else if (bubbleType == 1)
+            {
+                PointCounterManager.countSpawnedBlue++;
+            }
+            else if (bubbleType == 2)
+            {
+                PointCounterManager.countSpawnedYellow++;
+            }
+
+            if (leftHandBonus) { PointCounterManager.countSpawnedLeftBonus++; };
+
             Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
-            GameObject ball = Instantiate(spheres[Random.Range(0, numColors)], newPos, Quaternion.identity);
+            GameObject ball = Instantiate(spheres[bubbleType], newPos, Quaternion.identity);
 
 
             if (time > (hintSpawnTime + hintFreq))
@@ -359,6 +425,8 @@ public class CircularBubbleSpawner : MonoBehaviour
 
 
                 //Debug.Log("deg: " + deg);
+                PointCounterManager.countSpawnedRed++;
+                if (leftHandBonus) { PointCounterManager.countSpawnedLeftBonus++; };
 
                 Vector3 lastPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
                 GameObject lastBall = Instantiate(lastSphere, lastPos, Quaternion.identity);
@@ -387,6 +455,9 @@ public class CircularBubbleSpawner : MonoBehaviour
             localDeg = rigDegree + Random.Range(-90, 90);
             Debug.Log("deg: " + localDeg);
             angle = (localDeg * Mathf.PI * 2f / 360);
+
+            PointCounterManager.countSpawnedRed++;
+            if (leftHandBonus) { PointCounterManager.countSpawnedLeftBonus++; };
 
             Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
             GameObject ball = Instantiate(spheres[Random.Range(0, numColors)], newPos, Quaternion.identity);
@@ -420,6 +491,8 @@ public class CircularBubbleSpawner : MonoBehaviour
 
 
                 //Debug.Log("deg: " + deg);
+                PointCounterManager.countSpawnedRed++;
+                if (leftHandBonus) { PointCounterManager.countSpawnedLeftBonus++; };
 
                 Vector3 lastPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
                 GameObject lastBall = Instantiate(lastSphere, lastPos, Quaternion.identity);

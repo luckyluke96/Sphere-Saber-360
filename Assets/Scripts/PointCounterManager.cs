@@ -47,6 +47,16 @@ public class PointCounterManager : MonoBehaviour
     public static int gazeCountLamp;
     public static int gazeCountSparrow;
 
+    public static int countHitRed;
+    public static int countHitBlue;
+    public static int countHitYellow;
+    public static int countHitLeftBonus;
+
+    public static int countSpawnedRed;
+    public static int countSpawnedBlue;
+    public static int countSpawnedYellow;
+    public static int countSpawnedLeftBonus;
+
     public static float durCircularGame;
     //public int points;
 
@@ -107,4 +117,55 @@ public class PointCounterManager : MonoBehaviour
         PointCounterText.text = "path: " + filePath;
         */
     }
+
+    public static void resetVariables()
+    {
+        points = 0;
+        timer = 0;
+        rigDeg = 0;
+        gameLevel = ""; 
+
+         gazeDur = 0;
+         gazeDurBlueCanvas = 0;
+         gazeDurYellowCanvas = 0;
+         gazeDurPointCounterCanvas = 0;
+         gazeDurBlueSphere = 0;
+         gazeDurRedSphere = 0;
+         gazeDurYellowSphere = 0;
+         gazeDurLeftHandCanvas = 0;
+         gazeDurFoxMoving = 0;
+         gazeDurFoxRigid = 0;
+         gazeDurTerrain = 0;
+         gazeDurLamp = 0;
+         gazeDurSparrow = 0;
+
+     timeToRecFox = 0;
+     timeToFirstFixBlueCanvas = 0;
+     timeToFirstFixYellowCanvas = 0;
+
+    gazeCountBlueCanvas = 0;
+    gazeCountYellowCanvas = 0;
+    gazeCountPointCounterCanvas = 0;
+    gazeCountBlueSphere = 0;
+    gazeCountRedSphere = 0;
+    gazeCountYellowSphere = 0;
+    gazeCountLeftHandCanvas = 0;
+    gazeCountFoxMoving = 0;
+    gazeCountFoxRigid = 0;
+    gazeCountTerrain = 0;
+    gazeCountLamp = 0;
+    gazeCountSparrow = 0;
+
+    countHitRed = 0;
+    countHitBlue = 0;
+    countHitYellow = 0;
+        countHitLeftBonus = 0;
+
+    countSpawnedRed = 0;
+    countSpawnedBlue = 0;
+    countSpawnedYellow = 0;
+        countSpawnedLeftBonus = 0;
+
+    durCircularGame = 0;
+}
 }

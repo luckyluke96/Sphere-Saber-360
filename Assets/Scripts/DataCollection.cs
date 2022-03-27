@@ -58,7 +58,9 @@ public class DataCollection : MonoBehaviour
                 "GazeCount_FoxMoving;" + "Gaze_Count_Fox_Rigid;" + "Gaze_Count_Terrain;" + "Gaze_Count_Lamp;" +
                 "Gaze_Counter_Sparrow" +
                 "TimeToRecFox;" + "TimeToFirstFixBlueCanvas;" + "TimeToFirstFixYellowCanvas" +
-                "Circular_Game_Dur;" + "\n";
+                "Circular_Game_Dur;" +
+                "Hit_Red_Counter;" + "Hit_Blue_Counter;" + "Hit_Yellow_Counter;" + "Hit_Left;" +
+                "Spawned_Red;" + "Spawned_Blue;" + "Spawned_Yellow;" + "Spawned_Left" + "\n";
             string logString = DateTime.Now + ";" + PointCounterManager.points + ";" + PointCounterManager.gameLevel + ";" + PointCounterManager.rigDeg +
                 ";" + PointCounterManager.gazeDurBlueCanvas + ";" + PointCounterManager.gazeDurYellowCanvas + ";" + PointCounterManager.gazeDurPointCounterCanvas + ";" + PointCounterManager.gazeDurLeftHandCanvas +
                 ";" + PointCounterManager.gazeDur + ";" + PointCounterManager.gazeDurRedSphere + ";" + PointCounterManager.gazeDurBlueSphere + ";" + PointCounterManager.gazeDurYellowSphere +
@@ -69,7 +71,9 @@ public class DataCollection : MonoBehaviour
                 ";" + PointCounterManager.gazeCountFoxMoving + ";" + PointCounterManager.gazeCountFoxRigid + ";" + PointCounterManager.gazeCountTerrain + ";" + PointCounterManager.gazeCountLamp +
                 ";" + PointCounterManager.gazeCountSparrow +
                 ";" + PointCounterManager.timeToRecFox + ";" + PointCounterManager.timeToFirstFixBlueCanvas + ";" + PointCounterManager.timeToFirstFixYellowCanvas +
-                ";" + PointCounterManager.durCircularGame;
+                ";" + PointCounterManager.durCircularGame +
+                ";" + PointCounterManager.countHitRed + ";" + PointCounterManager.countHitBlue + ";" + PointCounterManager.countHitYellow + ";" + PointCounterManager.countHitLeftBonus +
+                ";" + PointCounterManager.countSpawnedRed + ";" + PointCounterManager.countSpawnedBlue + ";" + PointCounterManager.countSpawnedYellow + ";" + PointCounterManager.countSpawnedLeftBonus + ";" + "\n";
 
 
             // add column names only when file is created the first time -> das hier überschreibt alles

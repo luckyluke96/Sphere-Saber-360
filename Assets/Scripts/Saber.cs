@@ -44,43 +44,52 @@ public class Saber : MonoBehaviour
                 {
                     // pointCounterManager.GetComponent<PointCounterManager>().points -= 20;
                     PointCounterManager.points -= 20f;
+                    PointCounterManager.countHitBlue++
 
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {
                         PointCounterManager.points += 150f;
+                        PointCounterManager.countHitLeftBonus++;
                     }
 
                 }
                 else if (hit.transform.tag == "RedSphere")
                 {
                     PointCounterManager.points += 20f;
+                    PointCounterManager.countHitRed++
 
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {
                         PointCounterManager.points += 150f;
+                        PointCounterManager.countHitLeftBonus++; 
                     }
                 }
                 else if (hit.transform.tag == "YellowSphere")
                 {
                     PointCounterManager.points += 100f;
+                    PointCounterManager.countHitYellow++
 
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {
+                        PointCounterManager.countHitLeftBonus++;
                         PointCounterManager.points += 150f;
                     }
                 }
                 else if (hit.transform.tag == "LastSphere")
                 {
                     PointCounterManager.points += 20f;
+                    PointCounterManager.countHitRed++
 
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {
+                        PointCounterManager.countHitLeftBonus++;
                         PointCounterManager.points += 150f;
                     }
                     //StartCoroutine(wait(3));
                     //Instantiate(backToMenuCanvas);
 
                     DataCollection.LogGameData();
+                    PointCounterManager.resetVariables();
                     SceneManager.LoadScene(0);
                     
                 }
