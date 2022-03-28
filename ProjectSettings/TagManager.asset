@@ -28,6 +28,7 @@ TagManager:
   - lb_groundTarget
   - lb_perchTarget
   - Sparrow
+  - Fountain
   layers:
   - Default
   - TransparentFX

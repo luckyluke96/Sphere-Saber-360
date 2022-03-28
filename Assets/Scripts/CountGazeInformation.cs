@@ -113,6 +113,11 @@ namespace Tobii.XR.Examples.GettingStarted
                     PointCounterManager.gazeCountSparrow += 1;
 
                 }
+                else if (gameObject.tag == "Fountain")
+                {
+                    PointCounterManager.gazeCountFountain += 1;
+
+                }
 
             }
             //If this object lost focus, fade the object's color to it's original color
@@ -232,6 +237,12 @@ namespace Tobii.XR.Examples.GettingStarted
                 {
                     tTime = Time.deltaTime;
                     PointCounterManager.gazeDurSparrow += tTime;
+
+                }
+                else if (gameObject.tag == "Fountain")
+                {
+                    tTime = Time.deltaTime;
+                    PointCounterManager.gazeDurFountain += tTime;
 
                 }
 

@@ -553,6 +553,9 @@ public class lb_Bird : MonoBehaviour {
 
 	void PlaySong(){
 		if (!dead){
+			GetComponent<AudioSource>().PlayOneShot(song1, 1);
+			Debug.Log("Play bird song");
+			/*
 			if(Random.value < .5){
 				//GetComponent<AudioSource>().PlayOneShot (song1,1);
 				
@@ -562,6 +565,7 @@ public class lb_Bird : MonoBehaviour {
 				//GetComponent<AudioSource>().PlayOneShot (song2,1);
 				GetComponent<AudioSource>().Play();
 			}
+			*/
 		}
 	}
 
@@ -569,6 +573,17 @@ public class lb_Bird : MonoBehaviour {
 		if(onGround && !paused && !dead){
 			OnGroundBehaviors();	
 		}
-		InvokeRepeating("PlaySong", 0f, 10f);
+		
+	}
+
+	void Twitter()
+    {
+		GetComponent<AudioSource>().PlayOneShot(song1, 1);
+		Debug.Log("Play bird song");
+	}
+
+    private void Start()
+    {
+		InvokeRepeating("Twitter", 3f, 15f);
 	}
 }

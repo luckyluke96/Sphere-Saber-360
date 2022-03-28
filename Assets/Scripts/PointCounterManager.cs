@@ -29,6 +29,7 @@ public class PointCounterManager : MonoBehaviour
     public static float gazeDurTerrain;
     public static float gazeDurLamp;
     public static float gazeDurSparrow;
+    public static float gazeDurFountain;
 
     public static float timeToRecFox;
     public static float timeToFirstFixBlueCanvas;
@@ -46,6 +47,7 @@ public class PointCounterManager : MonoBehaviour
     public static int gazeCountTerrain;
     public static int gazeCountLamp;
     public static int gazeCountSparrow;
+    public static int gazeCountFountain;
 
     public static int countHitRed;
     public static int countHitBlue;
@@ -138,6 +140,7 @@ public class PointCounterManager : MonoBehaviour
          gazeDurTerrain = 0;
          gazeDurLamp = 0;
          gazeDurSparrow = 0;
+        gazeDurFountain = 0;
 
      timeToRecFox = 0;
      timeToFirstFixBlueCanvas = 0;
@@ -155,6 +158,7 @@ public class PointCounterManager : MonoBehaviour
     gazeCountTerrain = 0;
     gazeCountLamp = 0;
     gazeCountSparrow = 0;
+        gazeCountFountain = 0;
 
     countHitRed = 0;
     countHitBlue = 0;
