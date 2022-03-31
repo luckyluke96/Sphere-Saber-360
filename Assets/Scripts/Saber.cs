@@ -46,6 +46,7 @@ public class Saber : MonoBehaviour
                     PointCounterManager.points -= 20f;
                     PointCounterManager.countHitBlue++;
 
+                   
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {
                         PointCounterManager.points += 150f;
@@ -57,6 +58,8 @@ public class Saber : MonoBehaviour
                 {
                     PointCounterManager.points += 20f;
                     PointCounterManager.countHitRed++;
+
+                    
 
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {

@@ -72,6 +72,12 @@ namespace Tobii.XR.Examples.GettingStarted
                 {
                     PointCounterManager.gazeCountBlueSphere += 1;
 
+                    if (firstGaze)
+                    {
+                        PointCounterManager.timeToFirstFixBlueCanvas = spawnDur;
+                        firstGaze = false;
+                    }
+
                 }
                 else if (gameObject.tag == "RedSphere")
                 {
@@ -87,15 +93,33 @@ namespace Tobii.XR.Examples.GettingStarted
                 {
                     PointCounterManager.gazeCountLeftHandCanvas += 1;
 
+                    if (firstGaze)
+                    {
+                        PointCounterManager.timeToFirstHintCanvasLeftHand = spawnDur;
+                        firstGaze = false;
+                    }
+
                 }
                 else if (gameObject.tag == "FoxMoving")
                 {
                     PointCounterManager.gazeCountFoxMoving += 1;
 
+                    if (firstGaze)
+                    {
+                        PointCounterManager.timeToFirstFixFoxMoving = spawnDur;
+                        firstGaze = false;
+                    }
+
                 }
                 else if (gameObject.tag == "FoxRigid")
                 {
                     PointCounterManager.gazeCountFoxRigid += 1;
+
+                    if (firstGaze)
+                    {
+                        PointCounterManager.timeToFirstFixFoxRigid = spawnDur;
+                        firstGaze = false;
+                    }
 
                 }
                 else if (gameObject.tag == "Terrain")
@@ -107,6 +131,12 @@ namespace Tobii.XR.Examples.GettingStarted
                 {
                     PointCounterManager.gazeCountLamp += 1;
 
+                    if (firstGaze)
+                    {
+                        PointCounterManager.timeToFirstFixLamp = spawnDur;
+                        firstGaze = false;
+                    }
+
                 }
                 else if (gameObject.tag == "Sparrow")
                 {
@@ -116,6 +146,12 @@ namespace Tobii.XR.Examples.GettingStarted
                 else if (gameObject.tag == "Fountain")
                 {
                     PointCounterManager.gazeCountFountain += 1;
+
+                    if (firstGaze)
+                    {
+                        PointCounterManager.timeToFirstFixFountain = spawnDur;
+                        firstGaze = false;
+                    }
 
                 }
 
@@ -254,17 +290,7 @@ namespace Tobii.XR.Examples.GettingStarted
 
         private void FixedUpdate()
         {
-            /*
-            Debug.Log("OldTimer: " + timer);
-            float delta = Time.deltaTime;
-            PointCounterManager.timer = PointCounterManager.timer + delta;
-            timer += delta;
-
-            Debug.Log("DeltaTime: " + delta);
-            Debug.Log("FixedUpdate: " + timer);
-            Debug.Log("PointerCoutnerTimer: " + PointCounterManager.timer);
-            */
-
+            
             spawnDur += Time.deltaTime;
 
         }

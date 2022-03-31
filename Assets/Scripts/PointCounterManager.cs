@@ -34,7 +34,13 @@ public class PointCounterManager : MonoBehaviour
     public static float timeToRecFox;
     public static float timeToFirstFixBlueCanvas;
     public static float timeToFirstFixYellowCanvas;
-    
+    public static float timeToFirstHintCanvasLeftHand;
+    public static float timeToFirstFixFoxMoving;
+    public static float timeToFirstFixFoxRigid;
+    public static float timeToFirstFixLamp;
+    public static float timeToFirstFixFountain;
+
+
     public static int gazeCountBlueCanvas;
     public static int gazeCountYellowCanvas;
     public static int gazeCountPointCounterCanvas;
@@ -61,6 +67,8 @@ public class PointCounterManager : MonoBehaviour
 
     public static float durCircularGame;
     //public int points;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -99,6 +107,9 @@ public class PointCounterManager : MonoBehaviour
 
         PointCounterText = GameObject.Find("PointCounterText").GetComponent<Text>();
         PointCounterText.text = "Punkte: " + points.ToString();
+
+        // PointCounterText.text = "Punkte: " + data["points"].ToString();
+
         // gazeDur = gazeDurBlueCanvas + gazeDurYellowCanvas + gazeDurPointCounterCanvas + gazeDurBlueSphere + gazeDurRedSphere + gazeDurYellowSphere;
 
         // GazeCounterText.text = "redbubble " + gazeDurRedSphere.ToString() + "ms\nbluesphere " + gazeDurBlueSphere.ToString();
@@ -107,7 +118,7 @@ public class PointCounterManager : MonoBehaviour
         // TimerText.text = "time: " + timer.ToString() + "s";
 
         // GameObject.Find("TimerText").GetComponent<Text>().text = "Terr Dur: " + gazeDurTerrain;
-        
+
         // Debug.Log("Sign text: " + PointCounterText.text);
 
         /*
@@ -127,49 +138,54 @@ public class PointCounterManager : MonoBehaviour
         rigDeg = 0;
         gameLevel = ""; 
 
-         gazeDur = 0;
-         gazeDurBlueCanvas = 0;
-         gazeDurYellowCanvas = 0;
-         gazeDurPointCounterCanvas = 0;
-         gazeDurBlueSphere = 0;
-         gazeDurRedSphere = 0;
-         gazeDurYellowSphere = 0;
-         gazeDurLeftHandCanvas = 0;
-         gazeDurFoxMoving = 0;
-         gazeDurFoxRigid = 0;
-         gazeDurTerrain = 0;
-         gazeDurLamp = 0;
-         gazeDurSparrow = 0;
+        gazeDur = 0;
+        gazeDurBlueCanvas = 0;
+        gazeDurYellowCanvas = 0;
+        gazeDurPointCounterCanvas = 0;
+        gazeDurBlueSphere = 0;
+        gazeDurRedSphere = 0;
+        gazeDurYellowSphere = 0;
+        gazeDurLeftHandCanvas = 0;
+        gazeDurFoxMoving = 0;
+        gazeDurFoxRigid = 0;
+        gazeDurTerrain = 0;
+        gazeDurLamp = 0;
+        gazeDurSparrow = 0;
         gazeDurFountain = 0;
 
-     timeToRecFox = 0;
-     timeToFirstFixBlueCanvas = 0;
-     timeToFirstFixYellowCanvas = 0;
+        timeToRecFox = 0;
+        timeToFirstFixBlueCanvas = 0;
+        timeToFirstFixYellowCanvas = 0;
+        timeToFirstHintCanvasLeftHand = 0;
+        timeToFirstFixFoxMoving = 0;
+        timeToFirstFixFoxRigid = 0;
+        timeToFirstFixLamp = 0;
+        timeToFirstFixFountain = 0;
 
-    gazeCountBlueCanvas = 0;
-    gazeCountYellowCanvas = 0;
-    gazeCountPointCounterCanvas = 0;
-    gazeCountBlueSphere = 0;
-    gazeCountRedSphere = 0;
-    gazeCountYellowSphere = 0;
-    gazeCountLeftHandCanvas = 0;
-    gazeCountFoxMoving = 0;
-    gazeCountFoxRigid = 0;
-    gazeCountTerrain = 0;
-    gazeCountLamp = 0;
-    gazeCountSparrow = 0;
+        gazeCountBlueCanvas = 0;
+        gazeCountYellowCanvas = 0;
+        gazeCountPointCounterCanvas = 0;
+        gazeCountBlueSphere = 0;
+        gazeCountRedSphere = 0;
+        gazeCountYellowSphere = 0;
+        gazeCountLeftHandCanvas = 0;
+        gazeCountFoxMoving = 0;
+        gazeCountFoxRigid = 0;
+        gazeCountTerrain = 0;
+        gazeCountLamp = 0;
+        gazeCountSparrow = 0;
         gazeCountFountain = 0;
 
-    countHitRed = 0;
-    countHitBlue = 0;
-    countHitYellow = 0;
+        countHitRed = 0;
+        countHitBlue = 0;
+        countHitYellow = 0;
         countHitLeftBonus = 0;
 
-    countSpawnedRed = 0;
-    countSpawnedBlue = 0;
-    countSpawnedYellow = 0;
+        countSpawnedRed = 0;
+        countSpawnedBlue = 0;
+        countSpawnedYellow = 0;
         countSpawnedLeftBonus = 0;
 
-    durCircularGame = 0;
-}
+        durCircularGame = 0;
+    }
 }
