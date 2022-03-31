@@ -533,8 +533,9 @@ void Update()
         float camDeg = getCameraDirectionDeg();
         angle = (camDeg * Mathf.PI * 2f / 360);
         float hintRadius = radius + 1;
+        float height = Random.Range(1.5f, 2.5f);
 
-        Vector3 newPos = new Vector3(Mathf.Sin(angle) * hintRadius, 2f, Mathf.Cos(angle) * hintRadius);
+        Vector3 newPos = new Vector3(Mathf.Sin(angle) * hintRadius, height, Mathf.Cos(angle) * hintRadius);
 
         if (numColors == 1)
         {

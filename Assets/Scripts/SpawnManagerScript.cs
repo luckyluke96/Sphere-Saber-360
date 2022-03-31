@@ -18,7 +18,7 @@ public class SpawnManagerScript : MonoBehaviour
         PointCounterManager.rigDeg = deg;
         // Debug.Log("Rig spawn deg: " + deg);
         float angle = (deg * Mathf.PI * 2f / 360);
-        Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
+        Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 3f, Mathf.Cos(angle) * radius);
 
         Instantiate(PointCounterCanvas, newPos, Quaternion.Euler(0f, deg, 0f));
         //transform.position(newPos);

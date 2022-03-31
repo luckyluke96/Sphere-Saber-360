@@ -25,8 +25,9 @@ public class DataCollection : MonoBehaviour
         pathAllHighscores = @"" + Application.persistentDataPath + "/logs/";
         Debug.Log(pathAllHighscores);
         Directory.CreateDirectory(pathAllHighscores);
+        
         //pathAllHighscores = Path.Combine(pathAllHighscores, "allHighscorelogs" + Configuration.Instance.playerID + ".csv");
-        pathAllHighscores = Path.Combine(pathAllHighscores, "allHighscorelogs_" + "test" + ".csv");
+        pathAllHighscores = Path.Combine(pathAllHighscores, "allHighscorelogs_"+ "test" + ".csv");
     }
 
 
@@ -57,7 +58,7 @@ public class DataCollection : MonoBehaviour
                 "Gaze_Count_Blue_Sphere;" + "Gaze_Count_Red_Sphere;" + "Gaze_Count_Yellow_Sphere;" +
                 "GazeCount_FoxMoving;" + "Gaze_Count_Fox_Rigid;" + "Gaze_Count_Terrain;" + "Gaze_Count_Lamp;" +
                 "Gaze_Counter_Sparrow;" + "Gaze_Counter_Fountain;" +
-                "TimeToRecFox;" + "TimeToFirstFixBlueCanvas;" + "TimeToFirstFixYellowCanvas;" + "TimeToFirstHintCanvasLeftHand;" +
+                "TimeToRecFox;" + "TimeToFirstFixBlueCanvas;" + "TimeToFirstFixYellowCanvas;" + "TimeToFirstHintCanvasLeftHand" +
                 "TimeToFixFoxMoving;" + "timeToFirstFixFoxRigid;" + "timeToFirstFixLamp;" + "timeToFirstFixFountain;" +
                 "Circular_Game_Dur;" + 
                 "Hit_Red_Counter;" + "Hit_Blue_Counter;" + "Hit_Yellow_Counter;" + "Hit_Left;" +
