@@ -58,7 +58,7 @@ public class DataCollection : MonoBehaviour
                 "Gaze_Count_Blue_Sphere;" + "Gaze_Count_Red_Sphere;" + "Gaze_Count_Yellow_Sphere;" +
                 "GazeCount_FoxMoving;" + "Gaze_Count_Fox_Rigid;" + "Gaze_Count_Terrain;" + "Gaze_Count_Lamp;" +
                 "Gaze_Counter_Sparrow;" + "Gaze_Counter_Fountain;" +
-                "TimeToRecFox;" + "TimeToFirstFixBlueCanvas;" + "TimeToFirstFixYellowCanvas;" + "TimeToFirstHintCanvasLeftHand" +
+                "TimeToRecFox;" + "TimeToFirstFixBlueCanvas;" + "TimeToFirstFixYellowCanvas;" + "TimeToFirstHintCanvasLeftHand;" +
                 "TimeToFixFoxMoving;" + "timeToFirstFixFoxRigid;" + "timeToFirstFixLamp;" + "timeToFirstFixFountain;" +
                 "Circular_Game_Dur;" + 
                 "Hit_Red_Counter;" + "Hit_Blue_Counter;" + "Hit_Yellow_Counter;" + "Hit_Left;" +
@@ -67,7 +67,7 @@ public class DataCollection : MonoBehaviour
                 ";" + PointCounterManager.gazeDurBlueCanvas + ";" + PointCounterManager.gazeDurYellowCanvas + ";" + PointCounterManager.gazeDurPointCounterCanvas + ";" + PointCounterManager.gazeDurLeftHandCanvas +
                 ";" + PointCounterManager.gazeDur + ";" + PointCounterManager.gazeDurRedSphere + ";" + PointCounterManager.gazeDurBlueSphere + ";" + PointCounterManager.gazeDurYellowSphere +
                 ";" + PointCounterManager.gazeDurFoxMoving + ";" + PointCounterManager.gazeDurFoxRigid + ";" + PointCounterManager.gazeDurTerrain + ";" + PointCounterManager.gazeDurLamp +
-                ";" + PointCounterManager.gazeDurSparrow + ";" + PointCounterManager.gazeCountFountain +
+                ";" + PointCounterManager.gazeDurSparrow + ";" + PointCounterManager.gazeDurFountain +
                 ";" + PointCounterManager.gazeCountBlueCanvas + ";" + PointCounterManager.gazeCountYellowCanvas + ";" + PointCounterManager.gazeCountPointCounterCanvas +
                 ";" + PointCounterManager.gazeCountBlueSphere + ";" + PointCounterManager.gazeCountRedSphere + ";" + PointCounterManager.gazeCountYellowSphere +
                 ";" + PointCounterManager.gazeCountFoxMoving + ";" + PointCounterManager.gazeCountFoxRigid + ";" + PointCounterManager.gazeCountTerrain + ";" + PointCounterManager.gazeCountLamp +

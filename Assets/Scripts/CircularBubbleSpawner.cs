@@ -95,12 +95,16 @@ public class CircularBubbleSpawner : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Return direction of view in degree between 0 and 360
+    /// </summary>
+    /// <returns></returns>
     public static float getCameraDirectionDeg()
     {
         Camera camera = Camera.main;
         // Vector3 camPosition = camera.ViewportToWorldPoint(new Vector3(0, 0, camera.nearClipPlane));
         float y = RigSpawner.rigDegree + camera.transform.localEulerAngles.y;
-        Debug.Log("Y: " + y);
+        // Debug.Log("Y: " + y);
         angle = (y * Mathf.PI * 2f / 360);
         // Vector3 newPos = new Vector3(Mathf.Sin(angle) * (radius-3), 2f, Mathf.Cos(angle) * (radius-3));
         // Instantiate(testObject, newPos, Quaternion.identity);
@@ -151,7 +155,7 @@ public class CircularBubbleSpawner : MonoBehaviour
             GameObject ball = Instantiate(spheres[bubbleType], newPos, Quaternion.identity);
 
 
-            Debug.Log("deg: " + deg + "hintSpawndeg: " + hintSpawnDeg);
+            // Debug.Log("deg: " + deg + "hintSpawndeg: " + hintSpawnDeg);
             // spawn Hint Canvas if possible
             if (deg >= (hintSpawnDeg + 120))
             { 
@@ -241,7 +245,7 @@ public class CircularBubbleSpawner : MonoBehaviour
             Vector3 newPos = new Vector3(Mathf.Sin(angle) * radius, 2f, Mathf.Cos(angle) * radius);
             GameObject ball = Instantiate(spheres[bubbleType], newPos, Quaternion.identity);
 
-            Debug.Log("deg: " + deg + "hintSpawndeg: " + hintSpawnDeg);
+            // Debug.Log("deg: " + deg + "hintSpawndeg: " + hintSpawnDeg);
             // spawn Hint Canvas if possible
             if (deg >= (hintSpawnDeg + 90))
             {
@@ -375,7 +379,7 @@ public class CircularBubbleSpawner : MonoBehaviour
         if (time <= gameDur)
         {
             localDeg = rigDegree + Random.Range(-90, 90);
-            Debug.Log("deg: " + localDeg);
+            // Debug.Log("deg: " + localDeg);
             angle = (localDeg * Mathf.PI * 2f / 360);
 
             int bubbleType = Random.Range(0, numColors);
@@ -453,7 +457,7 @@ public class CircularBubbleSpawner : MonoBehaviour
         if (time <= gameDur)
         {
             localDeg = rigDegree + Random.Range(-90, 90);
-            Debug.Log("deg: " + localDeg);
+            // Debug.Log("deg: " + localDeg);
             angle = (localDeg * Mathf.PI * 2f / 360);
 
             PointCounterManager.countSpawnedRed++;

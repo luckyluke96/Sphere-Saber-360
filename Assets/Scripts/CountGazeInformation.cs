@@ -24,6 +24,17 @@ namespace Tobii.XR.Examples.GettingStarted
         private float spawnDur;
         private bool firstGaze = true;
 
+        private bool foxRigidInFOV = false;
+        private bool foxMovingInFOV = false;
+        private bool fountainInFOV = false;
+        private bool lampInFOV = false;
+
+        private float spawnDurFoxRigid;
+        private float spawnDurFoxMoving;
+        private float spawnDurFountain;
+        private float spawnDurLamp;
+
+
         //The method of the "IGazeFocusable" interface, which will be called when this object receives or loses focus
         public void GazeFocusChanged(bool hasFocus)
         {
@@ -106,7 +117,7 @@ namespace Tobii.XR.Examples.GettingStarted
 
                     if (firstGaze)
                     {
-                        PointCounterManager.timeToFirstFixFoxMoving = spawnDur;
+                        PointCounterManager.timeToFirstFixFoxMoving = spawnDurFoxMoving;
                         firstGaze = false;
                     }
 
@@ -117,7 +128,7 @@ namespace Tobii.XR.Examples.GettingStarted
 
                     if (firstGaze)
                     {
-                        PointCounterManager.timeToFirstFixFoxRigid = spawnDur;
+                        PointCounterManager.timeToFirstFixFoxRigid = spawnDurFoxRigid;
                         firstGaze = false;
                     }
 
@@ -133,7 +144,7 @@ namespace Tobii.XR.Examples.GettingStarted
 
                     if (firstGaze)
                     {
-                        PointCounterManager.timeToFirstFixLamp = spawnDur;
+                        PointCounterManager.timeToFirstFixLamp = spawnDurLamp;
                         firstGaze = false;
                     }
 
@@ -149,7 +160,7 @@ namespace Tobii.XR.Examples.GettingStarted
 
                     if (firstGaze)
                     {
-                        PointCounterManager.timeToFirstFixFountain = spawnDur;
+                        PointCounterManager.timeToFirstFixFountain = spawnDurFountain;
                         firstGaze = false;
                     }
 
@@ -291,12 +302,59 @@ namespace Tobii.XR.Examples.GettingStarted
         private void FixedUpdate()
         {
             
+            
             spawnDur += Time.deltaTime;
 
             // Debug.Log("cam deg: " + CircularBubbleSpawner.getCameraDirectionDeg());
 
+            // Debug.Log("foxrigid in FOV: " + isInFieldOfView(PeripheralSpawner.foxRigidAngle));
+            // Debug.Log("foxmoving in FOV: " + isInFieldOfView(PeripheralSpawner.foxMovingAngle));
+            // Debug.Log("fountain in FOV: " + isInFieldOfView(PeripheralSpawner.fountainAngle));
+            // Debug.Log("lamp in FOV: " + isInFieldOfView(PeripheralSpawner.lampAngle));
+
+            
+            // sets variable to true that marks if object has been in FOV at least once
+            if(isInFieldOfView(PeripheralSpawner.foxRigidAngle))
+            {
+                foxMovingInFOV = true;
+            }
+            if(isInFieldOfView(PeripheralSpawner.foxMovingAngle))
+            {
+                foxMovingInFOV = true;
+            }
+            if(isInFieldOfView(PeripheralSpawner.fountainAngle))
+            {
+                fountainInFOV = true;
+            }
+            if(isInFieldOfView(PeripheralSpawner.lampAngle))
+            {
+                lampInFOV = true;
+            }
+
+            if(foxMovingInFOV) { spawnDurFoxMoving += Time.deltaTime;  };
+            if(foxRigidInFOV) { spawnDurFoxRigid += Time.deltaTime; };
+            if(fountainInFOV) { spawnDurFountain += Time.deltaTime; };
+            if(lampInFOV) { spawnDurLamp += Time.deltaTime; };
             
 
+        }
+
+        private bool isInFieldOfView(float angle)
+        {
+            float camDeg = CircularBubbleSpawner.getCameraDirectionDeg();
+            float left = camDeg - 30f; 
+            float right = camDeg + 30f;
+
+            // Debug.Log("left: " + left);
+            // Debug.Log("right: " + right);
+            // Debug.Log("angle: " + angle);
+
+            float diff = (camDeg - angle + 180f + 360f) % 360f - 180f;
+            if(-30 <= diff && diff <= 30)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
