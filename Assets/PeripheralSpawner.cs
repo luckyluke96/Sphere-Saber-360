@@ -11,7 +11,12 @@ public class PeripheralSpawner : MonoBehaviour
     public GameObject fountain;
     public GameObject lamp;
 
-    Vector3[] positions = { new Vector3(-13.14f, 0.109f, 2f), new Vector3(13.47f, 0.112f, 2.35f), new Vector3(11.75f, 0.24f, 9.46f), new Vector3(-13.47f, 0.712f, 6.94f) };
+    public static Vector3[] positions = { new Vector3(-13.14f, 0.109f, 2f), new Vector3(13.47f, 0.112f, 2.35f), new Vector3(11.75f, 0.24f, 9.46f), new Vector3(-13.47f, 0.712f, 6.94f) };
+
+    public static float foxRigidAngle;
+    public static float foxMovingAngle;
+    public static float fountainAngle;
+    public static float lampAngle;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +39,10 @@ public class PeripheralSpawner : MonoBehaviour
         fountain.transform.position = positions[2];
         lamp.transform.position = positions[3];
 
-        
+        Debug.Log("FoxRig Angle: " + calcAngle(positions[0]));
+        Debug.Log("FoxMov Angle: " + calcAngle(positions[1]));
+        Debug.Log("Fountain Angle: " + calcAngle(positions[2]));
+        Debug.Log("Lamp Angle: " + calcAngle(positions[3]));
 
     }
 
@@ -42,5 +50,29 @@ public class PeripheralSpawner : MonoBehaviour
     void Update()
     {
         
+    }
+
+    /// <summary>
+    /// Method to calculate angle between x,z coordinates of vector and (0,0,1)
+    /// </summary>
+    /// <param name="vec1">Vector</param>
+    /// <returns>Angle in degree</returns>
+    float calcAngle(Vector3 vec1)
+    {
+        Vector2 vec = new Vector2(vec1.x, vec1.z);
+        Vector2 center = new Vector2(0, 1);
+
+        // if vec1.x < 0 object is "left" from center -> angle must be normalized
+        if(vec1.x < 0)
+        {
+            return 360 - Vector3.SignedAngle(vec, center, Vector3.up);
+        }
+        else
+        {
+            return Vector3.SignedAngle(vec, center, Vector3.up);
+        }
+            
+       
+
     }
 }

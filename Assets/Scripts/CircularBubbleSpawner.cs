@@ -28,8 +28,8 @@ public class CircularBubbleSpawner : MonoBehaviour
     private float hintSpawnDeg = 0;
     private float hintFreq = 20f;
     private float hintSpawnTime;
-    private float angle = 0;
-    private float radius = 6f;
+    private static float angle = 0;
+    private static float radius = 6f;
     private bool lastShotHappend = false;
     private float gameDurationPerimeter = 360;
     private float gameDurationPerimeter180 = 180;
@@ -95,14 +95,14 @@ public class CircularBubbleSpawner : MonoBehaviour
         }
     }
 
-    float getCameraDirectionDeg()
+    public static float getCameraDirectionDeg()
     {
         Camera camera = Camera.main;
         // Vector3 camPosition = camera.ViewportToWorldPoint(new Vector3(0, 0, camera.nearClipPlane));
         float y = RigSpawner.rigDegree + camera.transform.localEulerAngles.y;
         Debug.Log("Y: " + y);
         angle = (y * Mathf.PI * 2f / 360);
-        Vector3 newPos = new Vector3(Mathf.Sin(angle) * (radius-3), 2f, Mathf.Cos(angle) * (radius-3));
+        // Vector3 newPos = new Vector3(Mathf.Sin(angle) * (radius-3), 2f, Mathf.Cos(angle) * (radius-3));
         // Instantiate(testObject, newPos, Quaternion.identity);
         return y;
 

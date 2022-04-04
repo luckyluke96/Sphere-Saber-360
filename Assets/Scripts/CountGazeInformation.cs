@@ -293,6 +293,10 @@ namespace Tobii.XR.Examples.GettingStarted
             
             spawnDur += Time.deltaTime;
 
+            // Debug.Log("cam deg: " + CircularBubbleSpawner.getCameraDirectionDeg());
+
+            
+
         }
     }
 }
