@@ -528,8 +528,9 @@ void Update()
     {
         time += Time.deltaTime;
         circGameDur += Time.deltaTime;
-        PointCounterManager.durCircularGame += circGameDur;
-        // Debug.Log("circGameDur: " + circGameDur);
+        PointCounterManager.durCircularGame += Time.deltaTime;
+        //Debug.Log("circGameDur: " + circGameDur);
+        //Debug.Log("PCM_gametime: " + PointCounterManager.durCircularGame);
     }
 
     void spawnHint()
@@ -539,7 +540,7 @@ void Update()
         float hintRadius = radius + 1;
         float height = Random.Range(1.5f, 2.5f);
 
-        Vector3 newPos = new Vector3(Mathf.Sin(angle) * hintRadius, height, Mathf.Cos(angle) * hintRadius);
+        Vector3 newPos = new Vector3(Mathf.Sin(angle) * hintRadius, 2, Mathf.Cos(angle) * hintRadius);
 
         if (numColors == 1)
         {
@@ -550,6 +551,7 @@ void Update()
         {
             Instantiate(hintCanvasYellow, newPos, Quaternion.Euler(0f, camDeg, 0f));
             numColors++;
+            Destroy(GameObject.FindGameObjectWithTag("HintCanvasBlue"));
         }
         else if (numColors == 3)
         {
@@ -558,6 +560,7 @@ void Update()
                 Instantiate(hintCanvasLeftHand, newPos, Quaternion.Euler(0f, camDeg, 0f));
                 leftHandBonus = true;
                 maxHintsSpawned = true;
+                Destroy(GameObject.FindGameObjectWithTag("HintCanvasYellow"));
             }
         }
 

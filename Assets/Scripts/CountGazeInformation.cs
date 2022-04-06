@@ -190,25 +190,25 @@ namespace Tobii.XR.Examples.GettingStarted
 
         private void Update()
         {
-            /*
+            
             //This lerp will fade the color of the object
             if (_renderer.material.HasProperty(_baseColor)) // new rendering pipeline (lightweight, hd, universal...)
             {
-                //_renderer.material.SetColor(_baseColor, Color.Lerp(_renderer.material.GetColor(_baseColor), _targetColor, Time.deltaTime * (1 / animationTime)));
+                _renderer.material.SetColor(_baseColor, Color.Lerp(_renderer.material.GetColor(_baseColor), _targetColor, Time.deltaTime * (1 / animationTime)));
             }
             else // old standard rendering pipline
             {
-                //_renderer.material.color = Color.Lerp(_renderer.material.color, _targetColor, Time.deltaTime * (1 / animationTime));
+                _renderer.material.color = Color.Lerp(_renderer.material.color, _targetColor, Time.deltaTime * (1 / animationTime));
             }
-            */
+            
 
             
 
             if (focus)
             {
 
-                tTime = Time.deltaTime;
-                PointCounterManager.gazeDur += tTime;
+                // tTime = Time.deltaTime;
+                
 
                 if (gameObject.tag == "TestCube")
                 {
@@ -293,6 +293,8 @@ namespace Tobii.XR.Examples.GettingStarted
 
                 }
 
+                PointCounterManager.gazeDur += Time.deltaTime;
+
 
             }
             
@@ -316,7 +318,7 @@ namespace Tobii.XR.Examples.GettingStarted
             // sets variable to true that marks if object has been in FOV at least once
             if(isInFieldOfView(PeripheralSpawner.foxRigidAngle))
             {
-                foxMovingInFOV = true;
+                foxRigidInFOV = true;
             }
             if(isInFieldOfView(PeripheralSpawner.foxMovingAngle))
             {

@@ -62,7 +62,10 @@ public class DataCollection : MonoBehaviour
                 "TimeToFixFoxMoving;" + "timeToFirstFixFoxRigid;" + "timeToFirstFixLamp;" + "timeToFirstFixFountain;" +
                 "Circular_Game_Dur;" + 
                 "Hit_Red_Counter;" + "Hit_Blue_Counter;" + "Hit_Yellow_Counter;" + "Hit_Left;" +
-                "Spawned_Red;" + "Spawned_Blue;" + "Spawned_Yellow;" + "Spawned_Left" + "\n";
+                "Spawned_Red;" + "Spawned_Blue;" + "Spawned_Yellow;" + "Spawned_Left;" +
+                "AngleFoxRigid;" + "AngleFoxMoving;" + "AngleFountain;" + "AngleLamp;" +
+                "positionFoxRigid;" + "positionFoxMoving;" + "positionFountain;" + "positionLamp;" +
+                "\n";
             string logString = DateTime.Now + ";" + PointCounterManager.points + ";" + PointCounterManager.gameLevel + ";" + PointCounterManager.rigDeg +
                 ";" + PointCounterManager.gazeDurBlueCanvas + ";" + PointCounterManager.gazeDurYellowCanvas + ";" + PointCounterManager.gazeDurPointCounterCanvas + ";" + PointCounterManager.gazeDurLeftHandCanvas +
                 ";" + PointCounterManager.gazeDur + ";" + PointCounterManager.gazeDurRedSphere + ";" + PointCounterManager.gazeDurBlueSphere + ";" + PointCounterManager.gazeDurYellowSphere +
@@ -71,13 +74,15 @@ public class DataCollection : MonoBehaviour
                 ";" + PointCounterManager.gazeCountBlueCanvas + ";" + PointCounterManager.gazeCountYellowCanvas + ";" + PointCounterManager.gazeCountPointCounterCanvas +
                 ";" + PointCounterManager.gazeCountBlueSphere + ";" + PointCounterManager.gazeCountRedSphere + ";" + PointCounterManager.gazeCountYellowSphere +
                 ";" + PointCounterManager.gazeCountFoxMoving + ";" + PointCounterManager.gazeCountFoxRigid + ";" + PointCounterManager.gazeCountTerrain + ";" + PointCounterManager.gazeCountLamp +
-                ";" + PointCounterManager.gazeCountSparrow + ";" + PointCounterManager.gazeCountFountain + 
+                ";" + PointCounterManager.gazeCountSparrow + ";" + PointCounterManager.gazeCountFountain +
                 ";" + PointCounterManager.timeToRecFox + ";" + PointCounterManager.timeToFirstFixBlueCanvas + ";" + PointCounterManager.timeToFirstFixYellowCanvas + ";" + PointCounterManager.timeToFirstHintCanvasLeftHand +
-                ";" + PointCounterManager.timeToFirstFixFoxMoving +";" + PointCounterManager.timeToFirstFixFoxRigid + ";" + PointCounterManager.timeToFirstFixLamp + ";" + PointCounterManager.timeToFirstFixFountain +
+                ";" + PointCounterManager.timeToFirstFixFoxMoving + ";" + PointCounterManager.timeToFirstFixFoxRigid + ";" + PointCounterManager.timeToFirstFixLamp + ";" + PointCounterManager.timeToFirstFixFountain +
                 ";" + PointCounterManager.durCircularGame +
                 ";" + PointCounterManager.countHitRed + ";" + PointCounterManager.countHitBlue + ";" + PointCounterManager.countHitYellow + ";" + PointCounterManager.countHitLeftBonus +
-                ";" + PointCounterManager.countSpawnedRed + ";" + PointCounterManager.countSpawnedBlue + ";" + PointCounterManager.countSpawnedYellow + ";" + PointCounterManager.countSpawnedLeftBonus;
-
+                ";" + PointCounterManager.countSpawnedRed + ";" + PointCounterManager.countSpawnedBlue + ";" + PointCounterManager.countSpawnedYellow + ";" + PointCounterManager.countSpawnedLeftBonus +
+                ";" + PointCounterManager.angleFoxRigid + ";" + PointCounterManager.angleFoxMoving + ";" + PointCounterManager.angleFountain + ";" + PointCounterManager.angleLamp + 
+                ";" + PointCounterManager.positionFoxRigid + ";" + PointCounterManager.positionFoxMoving + ";" + PointCounterManager.positionFountain + ";" + PointCounterManager.positionLamp
+                ;
 
             // add column names only when file is created the first time -> das hier überschreibt alles
             if (!File.Exists(pathAllHighscores))

@@ -11,7 +11,7 @@ public class PeripheralSpawner : MonoBehaviour
     public GameObject fountain;
     public GameObject lamp;
 
-    public static Vector3[] positions = { /*new Vector3(-13.14f, 0.109f, 2f),*/ new Vector3(0f, 0f, 6f), new Vector3(13.47f, 0.112f, 2.35f), new Vector3(11.75f, 0.24f, 9.46f), new Vector3(-13.47f, 0.712f, 6.94f) };
+    public static Vector3[] positions = { new Vector3(-13.14f, 0.109f, 2f), new Vector3(13.47f, 0.112f, 2.35f), new Vector3(11.75f, 0.24f, 9.46f), new Vector3(-13.47f, 0.712f, 6.94f) };
 
     public static float foxRigidAngle;
     public static float foxMovingAngle;
@@ -48,6 +48,17 @@ public class PeripheralSpawner : MonoBehaviour
         Debug.Log("FoxMov Angle: " + calcAngle(positions[1]));
         Debug.Log("Fountain Angle: " + fountainAngle);
         Debug.Log("Lamp Angle: " + calcAngle(positions[3]));
+
+        PointCounterManager.angleFoxRigid = foxRigidAngle;
+        PointCounterManager.angleFoxMoving = foxMovingAngle;
+        PointCounterManager.angleFountain = fountainAngle;
+        PointCounterManager.angleLamp = lampAngle;
+
+        PointCounterManager.positionFoxRigid = positions[0];
+        PointCounterManager.positionFoxMoving = positions[1];
+        PointCounterManager.positionFountain = positions[2];
+        PointCounterManager.positionLamp = positions[3];
+
 
 
     }

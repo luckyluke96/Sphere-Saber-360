@@ -72,7 +72,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 110
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -120,7 +120,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: 1134, y: 590}
+  m_SizeDelta: {x: 1134, y: 420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &708489014920018064
 Canvas:
@@ -245,6 +245,10 @@ PrefabInstance:
     - target: {fileID: 7644357275661237601, guid: e4e0240824953451dbf646e850b5f169, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7644357275661237601, guid: e4e0240824953451dbf646e850b5f169, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 438.04657
       objectReference: {fileID: 0}
     - target: {fileID: 7644357275661237601, guid: e4e0240824953451dbf646e850b5f169, type: 3}
       propertyPath: m_LocalPosition.x

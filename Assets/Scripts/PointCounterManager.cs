@@ -65,6 +65,16 @@ public class PointCounterManager : MonoBehaviour
     public static int countSpawnedYellow;
     public static int countSpawnedLeftBonus;
 
+    public static Vector3 positionFoxRigid;
+    public static Vector3 positionFoxMoving;
+    public static Vector3 positionFountain;
+    public static Vector3 positionLamp;
+
+    public static float angleFoxRigid;
+    public static float angleFoxMoving;
+    public static float angleFountain;
+    public static float angleLamp;
+
     public static float durCircularGame;
     //public int points;
 
@@ -185,6 +195,16 @@ public class PointCounterManager : MonoBehaviour
         countSpawnedBlue = 0;
         countSpawnedYellow = 0;
         countSpawnedLeftBonus = 0;
+
+        positionFoxRigid = new Vector3(0,0,0);
+        positionFoxMoving = new Vector3(0, 0, 0);
+        positionFountain = new Vector3(0, 0, 0);
+        positionLamp = new Vector3(0, 0, 0);
+
+        angleFoxRigid = 0;
+        angleFoxMoving = 0;
+        angleFountain = 0;
+        angleLamp = 0;
 
         durCircularGame = 0;
     }
