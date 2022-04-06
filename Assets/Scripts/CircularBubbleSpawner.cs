@@ -537,7 +537,7 @@ void Update()
     {
         float camDeg = getCameraDirectionDeg();
         angle = (camDeg * Mathf.PI * 2f / 360);
-        float hintRadius = radius + 1;
+                float hintRadius = radius + 1;
         float height = Random.Range(1.5f, 2.5f);
 
         Vector3 newPos = new Vector3(Mathf.Sin(angle) * hintRadius, 2, Mathf.Cos(angle) * hintRadius);
@@ -546,12 +546,14 @@ void Update()
         {
             Instantiate(hintCanvasBlue, newPos, Quaternion.Euler(0f, camDeg, 0f));
             numColors++;
+            PointCounterManager.angleBlueCanvas = angle;
         }
         else if (numColors == 2)
         {
             Instantiate(hintCanvasYellow, newPos, Quaternion.Euler(0f, camDeg, 0f));
             numColors++;
             Destroy(GameObject.FindGameObjectWithTag("HintCanvasBlue"));
+            PointCounterManager.angleYellowCanvas = angle;
         }
         else if (numColors == 3)
         {
@@ -561,6 +563,7 @@ void Update()
                 leftHandBonus = true;
                 maxHintsSpawned = true;
                 Destroy(GameObject.FindGameObjectWithTag("HintCanvasYellow"));
+                PointCounterManager.angleLeftHandCanvas = angle;
             }
         }
 

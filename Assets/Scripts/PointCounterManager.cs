@@ -75,6 +75,10 @@ public class PointCounterManager : MonoBehaviour
     public static float angleFountain;
     public static float angleLamp;
 
+    public static float angleBlueCanvas;
+    public static float angleYellowCanvas;
+    public static float angleLeftHandCanvas;
+
     public static float durCircularGame;
     //public int points;
 
@@ -205,6 +209,10 @@ public class PointCounterManager : MonoBehaviour
         angleFoxMoving = 0;
         angleFountain = 0;
         angleLamp = 0;
+
+        angleBlueCanvas = 0;
+        angleYellowCanvas = 0;
+        angleLeftHandCanvas = 0;
 
         durCircularGame = 0;
     }
