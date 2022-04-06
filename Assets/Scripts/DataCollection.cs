@@ -66,22 +66,22 @@ public class DataCollection : MonoBehaviour
                 "AngleFoxRigid;" + "AngleFoxMoving;" + "AngleFountain;" + "AngleLamp;" +
                 "positionFoxRigid;" + "positionFoxMoving;" + "positionFountain;" + "positionLamp;" +
                 "\n";
-            string logString = DateTime.Now + ";" + PointCounterManager.points + ";" + PointCounterManager.gameLevel + ";" + PointCounterManager.rigDeg +
-                ";" + PointCounterManager.gazeDurBlueCanvas + ";" + PointCounterManager.gazeDurYellowCanvas + ";" + PointCounterManager.gazeDurPointCounterCanvas + ";" + PointCounterManager.gazeDurLeftHandCanvas +
-                ";" + PointCounterManager.gazeDur + ";" + PointCounterManager.gazeDurRedSphere + ";" + PointCounterManager.gazeDurBlueSphere + ";" + PointCounterManager.gazeDurYellowSphere +
-                ";" + PointCounterManager.gazeDurFoxMoving + ";" + PointCounterManager.gazeDurFoxRigid + ";" + PointCounterManager.gazeDurTerrain + ";" + PointCounterManager.gazeDurLamp +
-                ";" + PointCounterManager.gazeDurSparrow + ";" + PointCounterManager.gazeDurFountain +
-                ";" + PointCounterManager.gazeCountBlueCanvas + ";" + PointCounterManager.gazeCountYellowCanvas + ";" + PointCounterManager.gazeCountPointCounterCanvas +
-                ";" + PointCounterManager.gazeCountBlueSphere + ";" + PointCounterManager.gazeCountRedSphere + ";" + PointCounterManager.gazeCountYellowSphere +
-                ";" + PointCounterManager.gazeCountFoxMoving + ";" + PointCounterManager.gazeCountFoxRigid + ";" + PointCounterManager.gazeCountTerrain + ";" + PointCounterManager.gazeCountLamp +
-                ";" + PointCounterManager.gazeCountSparrow + ";" + PointCounterManager.gazeCountFountain +
-                ";" + PointCounterManager.timeToRecFox + ";" + PointCounterManager.timeToFirstFixBlueCanvas + ";" + PointCounterManager.timeToFirstFixYellowCanvas + ";" + PointCounterManager.timeToFirstHintCanvasLeftHand +
-                ";" + PointCounterManager.timeToFirstFixFoxMoving + ";" + PointCounterManager.timeToFirstFixFoxRigid + ";" + PointCounterManager.timeToFirstFixLamp + ";" + PointCounterManager.timeToFirstFixFountain +
+            string logString = DateTime.Now.ToString() + ";" + PointCounterManager.points.ToString() + ";" + PointCounterManager.gameLevel.ToString() + ";" + PointCounterManager.rigDeg +
+                ";" + PointCounterManager.gazeDurBlueCanvas.ToString() + ";" + PointCounterManager.gazeDurYellowCanvas.ToString() + ";" + PointCounterManager.gazeDurPointCounterCanvas.ToString() + ";" + PointCounterManager.gazeDurLeftHandCanvas +
+                ";" + PointCounterManager.gazeDur.ToString() + ";" + PointCounterManager.gazeDurRedSphere.ToString() + ";" + PointCounterManager.gazeDurBlueSphere.ToString() + ";" + PointCounterManager.gazeDurYellowSphere +
+                ";" + PointCounterManager.gazeDurFoxMoving.ToString() + ";" + PointCounterManager.gazeDurFoxRigid.ToString() + ";" + PointCounterManager.gazeDurTerrain.ToString() + ";" + PointCounterManager.gazeDurLamp +
+                ";" + PointCounterManager.gazeDurSparrow.ToString() + ";" + PointCounterManager.gazeDurFountain +
+                ";" + PointCounterManager.gazeCountBlueCanvas.ToString() + ";" + PointCounterManager.gazeCountYellowCanvas.ToString() + ";" + PointCounterManager.gazeCountPointCounterCanvas +
+                ";" + PointCounterManager.gazeCountBlueSphere.ToString() + ";" + PointCounterManager.gazeCountRedSphere.ToString() + ";" + PointCounterManager.gazeCountYellowSphere +
+                ";" + PointCounterManager.gazeCountFoxMoving.ToString() + ";" + PointCounterManager.gazeCountFoxRigid.ToString() + ";" + PointCounterManager.gazeCountTerrain.ToString() + ";" + PointCounterManager.gazeCountLamp +
+                ";" + PointCounterManager.gazeCountSparrow.ToString() + ";" + PointCounterManager.gazeCountFountain +
+                ";" + PointCounterManager.timeToRecFox.ToString() + ";" + PointCounterManager.timeToFirstFixBlueCanvas.ToString() + ";" + PointCounterManager.timeToFirstFixYellowCanvas.ToString() + ";" + PointCounterManager.timeToFirstHintCanvasLeftHand +
+                ";" + PointCounterManager.timeToFirstFixFoxMoving.ToString() + ";" + PointCounterManager.timeToFirstFixFoxRigid.ToString() + ";" + PointCounterManager.timeToFirstFixLamp.ToString() + ";" + PointCounterManager.timeToFirstFixFountain +
                 ";" + PointCounterManager.durCircularGame +
-                ";" + PointCounterManager.countHitRed + ";" + PointCounterManager.countHitBlue + ";" + PointCounterManager.countHitYellow + ";" + PointCounterManager.countHitLeftBonus +
-                ";" + PointCounterManager.countSpawnedRed + ";" + PointCounterManager.countSpawnedBlue + ";" + PointCounterManager.countSpawnedYellow + ";" + PointCounterManager.countSpawnedLeftBonus +
-                ";" + PointCounterManager.angleFoxRigid + ";" + PointCounterManager.angleFoxMoving + ";" + PointCounterManager.angleFountain + ";" + PointCounterManager.angleLamp + 
-                ";" + PointCounterManager.positionFoxRigid + ";" + PointCounterManager.positionFoxMoving + ";" + PointCounterManager.positionFountain + ";" + PointCounterManager.positionLamp
+                ";" + PointCounterManager.countHitRed.ToString() + ";" + PointCounterManager.countHitBlue.ToString() + ";" + PointCounterManager.countHitYellow.ToString() + ";" + PointCounterManager.countHitLeftBonus +
+                ";" + PointCounterManager.countSpawnedRed.ToString() + ";" + PointCounterManager.countSpawnedBlue.ToString() + ";" + PointCounterManager.countSpawnedYellow.ToString() + ";" + PointCounterManager.countSpawnedLeftBonus +
+                ";" + PointCounterManager.angleFoxRigid.ToString() + ";" + PointCounterManager.angleFoxMoving.ToString() + ";" + PointCounterManager.angleFountain.ToString() + ";" + PointCounterManager.angleLamp + 
+                ";" + PointCounterManager.positionFoxRigid.ToString() + ";" + PointCounterManager.positionFoxMoving.ToString() + ";" + PointCounterManager.positionFountain.ToString() + ";" + PointCounterManager.positionLamp
                 ;
 
             // add column names only when file is created the first time -> das hier überschreibt alles

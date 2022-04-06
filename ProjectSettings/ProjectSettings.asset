@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Obi
-  productName: Sphere-Saber-360-0604-0920
+  productName: Sphere-Saber-360-0604-1039
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -267,6 +267,7 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 3437320781722201666, guid: ac1fc5c1e26694f49a2a06f6c7034af7, type: 2}
   - {fileID: 11400000, guid: f6f796cebba144485a9b6cb01114ca78, type: 2}
   - {fileID: 0}
@@ -287,7 +288,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.Obi.SphereSaber36006040920
+    Android: com.Obi.SphereSaber36006041039
     Standalone: com.DefaultCompany.BubbleSaber2020.3
   buildNumber:
     Standalone: 0
