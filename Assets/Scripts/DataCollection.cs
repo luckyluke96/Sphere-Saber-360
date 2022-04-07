@@ -71,14 +71,14 @@ public class DataCollection : MonoBehaviour
                 ";" + PointCounterManager.gazeDurBlueCanvas.ToString() + ";" + PointCounterManager.gazeDurYellowCanvas.ToString() + ";" + PointCounterManager.gazeDurPointCounterCanvas.ToString() + ";" + PointCounterManager.gazeDurLeftHandCanvas.ToString() +
                 ";" + PointCounterManager.gazeDur.ToString() + ";" + PointCounterManager.gazeDurRedSphere.ToString() + ";" + PointCounterManager.gazeDurBlueSphere.ToString() + ";" + PointCounterManager.gazeDurYellowSphere.ToString() +
                 ";" + PointCounterManager.gazeDurFoxMoving.ToString() + ";" + PointCounterManager.gazeDurFoxRigid.ToString() + ";" + PointCounterManager.gazeDurTerrain.ToString() + ";" + PointCounterManager.gazeDurLamp.ToString() +
-                ";" + PointCounterManager.gazeDurFountain +
+                ";" + PointCounterManager.gazeDurFountain.ToString() + 
                 ";" + PointCounterManager.gazeCountBlueCanvas.ToString() + ";" + PointCounterManager.gazeCountYellowCanvas.ToString() + ";" + PointCounterManager.gazeCountPointCounterCanvas.ToString() +
                 ";" + PointCounterManager.gazeCountBlueSphere.ToString() + ";" + PointCounterManager.gazeCountRedSphere.ToString() + ";" + PointCounterManager.gazeCountYellowSphere.ToString() +
                 ";" + PointCounterManager.gazeCountFoxMoving.ToString() + ";" + PointCounterManager.gazeCountFoxRigid.ToString() + ";" + PointCounterManager.gazeCountTerrain.ToString() + ";" + PointCounterManager.gazeCountLamp.ToString() +
-                ";" + PointCounterManager.gazeCountFountain +
+                ";" + PointCounterManager.gazeCountFountain.ToString() + 
                 ";" + PointCounterManager.timeToFirstFixBlueCanvas.ToString() + ";" + PointCounterManager.timeToFirstFixYellowCanvas.ToString() + ";" + PointCounterManager.timeToFirstHintCanvasLeftHand.ToString() +
                 ";" + PointCounterManager.timeToFirstFixFoxMoving.ToString() + ";" + PointCounterManager.timeToFirstFixFoxRigid.ToString() + ";" + PointCounterManager.timeToFirstFixLamp.ToString() + ";" + PointCounterManager.timeToFirstFixFountain.ToString() +
-                ";" + PointCounterManager.durCircularGame +
+                ";" + PointCounterManager.durCircularGame.ToString() + 
                 ";" + PointCounterManager.countHitRed.ToString() + ";" + PointCounterManager.countHitBlue.ToString() + ";" + PointCounterManager.countHitYellow.ToString() + ";" + PointCounterManager.countHitLeftBonus.ToString() +
                 ";" + PointCounterManager.countSpawnedRed.ToString() + ";" + PointCounterManager.countSpawnedBlue.ToString() + ";" + PointCounterManager.countSpawnedYellow.ToString() + ";" + PointCounterManager.countSpawnedLeftBonus.ToString() +
                 ";" + PointCounterManager.angleFoxRigid.ToString() + ";" + PointCounterManager.angleFoxMoving.ToString() + ";" + PointCounterManager.angleFountain.ToString() + ";" + PointCounterManager.angleLamp.ToString() + 

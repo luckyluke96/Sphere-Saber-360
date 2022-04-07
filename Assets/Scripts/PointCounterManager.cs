@@ -106,7 +106,10 @@ public class PointCounterManager : MonoBehaviour
         {
             gameLevel = "LevelRandom180";
         }
-
+        else if (SceneManager.GetActiveScene().name == "LevelRandom180WOHints")
+        {
+            gameLevel = "LevelRandom180WOHints";
+        }
 
 
 
