@@ -383,6 +383,7 @@ public class CircularBubbleSpawner : MonoBehaviour
             angle = (localDeg * Mathf.PI * 2f / 360);
 
             int bubbleType = Random.Range(0, numColors);
+            
             if (bubbleType == 0)
             {
                 PointCounterManager.countSpawnedRed++;

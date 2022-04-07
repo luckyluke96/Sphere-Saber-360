@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class SafetySphereScript : MonoBehaviour
 {
     public GameObject backToMenuCanvas;
+    public GameObject explosionRed;
+    public GameObject explosionBlue;
+    public GameObject explosionYellow;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,31 @@ public class SafetySphereScript : MonoBehaviour
         Debug.Log("trigger: "+other.tag);
         if(other.tag == "RedSphere" || other.tag == "BlueSphere" || other.tag == "YellowSphere")
         {
+            /*
+            switch(other.tag)
+            {
+                case "RedSphere": Instantiate(explosionRed, other.gameObject.transform.position, Quaternion.identity);
+                    break;
+                case "BlueSphere": Instantiate(explosionBlue, other.gameObject.transform.position, Quaternion.identity);
+                    break;
+                case "YellowSphere": Instantiate(explosionYellow, other.gameObject.transform.position, Quaternion.identity);
+                    break;
+            }*/
+
+            
+            if(other.tag == "RedSphere")
+            {
+                Instantiate(explosionRed, other.gameObject.transform.position, Quaternion.identity);
+            }
+            else if(other.tag == "BlueSphere")
+            {
+                Instantiate(explosionBlue, other.gameObject.transform.position, Quaternion.identity);
+            }
+            else if (other.tag == "YellowSphere")
+            {
+                Instantiate(explosionYellow, other.gameObject.transform.position, Quaternion.identity);
+            }
+            
             PointCounterManager.points -= 20f;
             Destroy(other.gameObject);
         }
