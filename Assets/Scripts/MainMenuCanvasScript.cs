@@ -14,6 +14,9 @@ namespace PathCreation.Examples
         public GameObject pathTraveller;
         public float speed = 1;
         public GameObject MenuCanvas;
+        public GameObject ExplanationA;
+        public GameObject ExplanationB;
+
 
         float distanceTravelled;
         bool runPath = false;
@@ -57,6 +60,25 @@ namespace PathCreation.Examples
             GameObject.Find("Fox").GetComponent<Animator>().SetBool("isRunning", true);
             GameObject.Find("Fox").GetComponent<Animator>().SetBool("isSitting", false);
         }
+
+        public void BackToMainMenu()
+        {
+            Instantiate(MenuCanvas);
+            Destroy(GameObject.FindGameObjectWithTag("ModeExplanationCanvas"));
+        }
+
+        public void ShowExplanationA()
+        {
+            Instantiate(ExplanationA);
+            Destroy(GameObject.FindGameObjectWithTag("MainMenuCanvas"));
+        }
+
+        public void ShowExplanationB()
+        {
+            Instantiate(ExplanationB);
+            Destroy(GameObject.FindGameObjectWithTag("MainMenuCanvas"));
+        }
+
 
         public void Start()
         {

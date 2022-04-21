@@ -29,6 +29,8 @@ TagManager:
   - lb_perchTarget
   - Sparrow
   - Fountain
+  - ModeExplanationCanvas
+  - MainMenuCanvas
   layers:
   - Default
   - TransparentFX
