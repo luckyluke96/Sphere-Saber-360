@@ -93,7 +93,12 @@ public class Saber : MonoBehaviour
 
                     DataCollection.LogGameData();
                     PointCounterManager.resetVariables();
+
+                    MainMenuCanvasScript.takeOffHMD = true;
+                   
                     SceneManager.LoadScene(0);
+                    
+
                     
                 }
                 destroySound.Play();

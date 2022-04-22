@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using PathCreation;
 
-namespace PathCreation.Examples
-{
+
 
     public class MainMenuCanvasScript : MonoBehaviour
     {
@@ -16,6 +15,8 @@ namespace PathCreation.Examples
         public GameObject MenuCanvas;
         public GameObject ExplanationA;
         public GameObject ExplanationB;
+    public GameObject TakeOffHMDCanvas;
+        public static bool takeOffHMD = false;
 
 
         float distanceTravelled;
@@ -82,7 +83,12 @@ namespace PathCreation.Examples
 
         public void Start()
         {
-            
+            if (takeOffHMD)
+            {
+                Destroy(GameObject.FindGameObjectWithTag("MainMenuCanvas"));
+                Instantiate(TakeOffHMDCanvas);
+                takeOffHMD = false;
+            }
         }
 
         void OnPathChanged()
@@ -125,4 +131,4 @@ namespace PathCreation.Examples
 
         
     }
-}
+

@@ -2891,6 +2891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenuCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8376497706215791993, guid: 2944d4fc082c34883be3a9df5df664f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8376497706215791996, guid: 2944d4fc082c34883be3a9df5df664f2, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
@@ -3946,6 +3950,7 @@ MonoBehaviour:
   MenuCanvas: {fileID: 8376497706215791993, guid: 2944d4fc082c34883be3a9df5df664f2, type: 3}
   ExplanationA: {fileID: 0}
   ExplanationB: {fileID: 0}
+  TakeOffHMDCanvas: {fileID: 0}
 --- !u!114 &8217631443862287991
 MonoBehaviour:
   m_ObjectHideFlags: 0

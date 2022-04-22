@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &3299786824204818414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,6 +751,18 @@ PrefabInstance:
     - target: {fileID: 2662993231488492757, guid: 205aef8b4022c44e1811cb09bfe9541d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartLevelRandom180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662993231488492758, guid: 205aef8b4022c44e1811cb09bfe9541d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8207547
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662993231488492758, guid: 205aef8b4022c44e1811cb09bfe9541d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8207547
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662993231488492758, guid: 205aef8b4022c44e1811cb09bfe9541d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8207547
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 205aef8b4022c44e1811cb09bfe9541d, type: 3}

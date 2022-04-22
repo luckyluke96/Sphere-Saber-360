@@ -60,6 +60,8 @@ public class SafetySphereScript : MonoBehaviour
             Destroy(other.gameObject);
             DataCollection.LogGameData();
 
+            MainMenuCanvasScript.takeOffHMD = true;
+
             //StartCoroutine(wait(10));
             //Instantiate(backToMenuCanvas);
             SceneManager.LoadScene(0);
