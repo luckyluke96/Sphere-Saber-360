@@ -49,15 +49,15 @@ public class DataCollection : MonoBehaviour
                          HighScore.Instance.score + "\t" + headMovement + "\t" + rightHandMovement + "\t" + leftHandMovement + "\t" + rightHandMovementAboveHead + "\t" + rightHandAboveHeadTime + "\t" + leftHandMovementAboveHead + "\t" + leftHandAboveHeadTime
                          + "\t" + TimePressureStudyLogic.Instance.currentMode.ToString() + "\t" + GameDataManager.Instance.amountOfFinishedBubbleRounds + "\t" + GameDataManager.Instance.amountOfFinishedBubbleRoundsThisRound + "\t" + Configuration.Instance.resetDistanceBetweenBubbles + "\t" + TimePressureStudyLogic.Instance.currentCondition.ToString() + "\t" + ((float) Configuration.Instance.levelLength / GameDataManager.Instance.amountOfFinishedBubbleRounds);
             */
-            string columnString = "DateTime;" + "Points;" + "Game_Level;" + "Rig_Deg;" +
+            string columnString = "ID;"+ "DateTime;" + "Points;" + "Game_Level;" + "Rig_Deg;" +
                 "Gaze_Dur_Blue_Canvas;" + "Gaze_Dur_Yellow_Canvas;" + "Gaze_Point_Counter_Canvas;" + "Gaze_Dur_LeftHand_Canvas;" +
                 "Gaze_Dur_Total;" + "Gaze_Dur_RedSphere;" + "Gaze_Dur_BlueSphere;" + "Gaze_Dur_YellowSphere;" +
                 "Gaze_Dur_FoxMoving;" + "Gaze_Dur_FoxRigid;" + "Gaze_Dur_Terrain;" + "Gaze_Dur_Lamp;" +
-                "Gaze_Dur_Fountain;" +
+                "Gaze_Dur_Fountain;" + "Gaze_Dur_ModeACanvas;" + "Gaze_Dur_ModeBCanvas;" +
                 "Gaze_Count_Blue_Canvas;" + "Gaze_Count_Yellow_Canvas;" + "Gaze_Count_Pointer_Canvas;" +
                 "Gaze_Count_Blue_Sphere;" + "Gaze_Count_Red_Sphere;" + "Gaze_Count_Yellow_Sphere;" +
                 "GazeCount_FoxMoving;" + "Gaze_Count_Fox_Rigid;" + "Gaze_Count_Terrain;" + "Gaze_Count_Lamp;" +
-                "Gaze_Counter_Fountain;" +
+                "Gaze_Counter_Fountain;" + "Gaze_Count_ModeACanvas;" + "Gaze_Count_ModeBCanvas;" +
                 "TimeToFirstFixBlueCanvas;" + "TimeToFirstFixYellowCanvas;" + "TimeToFirstHintCanvasLeftHand;" +
                 "TimeToFixFoxMoving;" + "timeToFirstFixFoxRigid;" + "timeToFirstFixLamp;" + "timeToFirstFixFountain;" +
                 "Circular_Game_Dur;" + 
@@ -67,15 +67,15 @@ public class DataCollection : MonoBehaviour
                 "positionFoxRigid;" + "positionFoxMoving;" + "positionFountain;" + "positionLamp;" +
                 "AngleBlueCanvas;" + "AngleYellowCanvas;" + "AngleLeftHandCanvas;" +
                 "\n";
-            string logString = DateTime.Now.ToString() + ";" + PointCounterManager.points.ToString() + ";" + PointCounterManager.gameLevel.ToString() + ";" + PointCounterManager.rigDeg.ToString() +
+            string logString = "******;" + DateTime.Now.ToString() + ";" + PointCounterManager.points.ToString() + ";" + PointCounterManager.gameLevel.ToString() + ";" + PointCounterManager.rigDeg.ToString() +
                 ";" + PointCounterManager.gazeDurBlueCanvas.ToString() + ";" + PointCounterManager.gazeDurYellowCanvas.ToString() + ";" + PointCounterManager.gazeDurPointCounterCanvas.ToString() + ";" + PointCounterManager.gazeDurLeftHandCanvas.ToString() +
                 ";" + PointCounterManager.gazeDur.ToString() + ";" + PointCounterManager.gazeDurRedSphere.ToString() + ";" + PointCounterManager.gazeDurBlueSphere.ToString() + ";" + PointCounterManager.gazeDurYellowSphere.ToString() +
                 ";" + PointCounterManager.gazeDurFoxMoving.ToString() + ";" + PointCounterManager.gazeDurFoxRigid.ToString() + ";" + PointCounterManager.gazeDurTerrain.ToString() + ";" + PointCounterManager.gazeDurLamp.ToString() +
-                ";" + PointCounterManager.gazeDurFountain.ToString() + 
+                ";" + PointCounterManager.gazeDurFountain.ToString() + ";" + PointCounterManager.gazeDurModeACanvas.ToString() + ";" + PointCounterManager.gazeDurModeBCanvas.ToString() +
                 ";" + PointCounterManager.gazeCountBlueCanvas.ToString() + ";" + PointCounterManager.gazeCountYellowCanvas.ToString() + ";" + PointCounterManager.gazeCountPointCounterCanvas.ToString() +
                 ";" + PointCounterManager.gazeCountBlueSphere.ToString() + ";" + PointCounterManager.gazeCountRedSphere.ToString() + ";" + PointCounterManager.gazeCountYellowSphere.ToString() +
                 ";" + PointCounterManager.gazeCountFoxMoving.ToString() + ";" + PointCounterManager.gazeCountFoxRigid.ToString() + ";" + PointCounterManager.gazeCountTerrain.ToString() + ";" + PointCounterManager.gazeCountLamp.ToString() +
-                ";" + PointCounterManager.gazeCountFountain.ToString() + 
+                ";" + PointCounterManager.gazeCountFountain.ToString() + ";" + PointCounterManager.gazeCountModeACanvas.ToString() + ";" + PointCounterManager.gazeCountModeBCanvas.ToString() +
                 ";" + PointCounterManager.timeToFirstFixBlueCanvas.ToString() + ";" + PointCounterManager.timeToFirstFixYellowCanvas.ToString() + ";" + PointCounterManager.timeToFirstHintCanvasLeftHand.ToString() +
                 ";" + PointCounterManager.timeToFirstFixFoxMoving.ToString() + ";" + PointCounterManager.timeToFirstFixFoxRigid.ToString() + ";" + PointCounterManager.timeToFirstFixLamp.ToString() + ";" + PointCounterManager.timeToFirstFixFountain.ToString() +
                 ";" + PointCounterManager.durCircularGame.ToString() + 

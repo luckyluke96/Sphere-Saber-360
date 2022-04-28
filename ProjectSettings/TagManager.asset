@@ -31,6 +31,8 @@ TagManager:
   - Fountain
   - ModeExplanationCanvas
   - MainMenuCanvas
+  - ModeACanvas
+  - ModeBCanvas
   layers:
   - Default
   - TransparentFX

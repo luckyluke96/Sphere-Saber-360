@@ -26,7 +26,7 @@ public class CircularBubbleSpawner : MonoBehaviour
     private float rigRot = 0;
     private bool rigDegNotInit = true;
     private float hintSpawnDeg = 0;
-    private float hintFreq = 20f;
+    private float hintFreq = 30f;
     private float hintSpawnTime;
     private static float angle = 0;
     private static float radius = 6f;
@@ -36,7 +36,7 @@ public class CircularBubbleSpawner : MonoBehaviour
     private int numColors = 1;
     private int bubbleCounter = 0;
     private float time;
-    private float gameDur = 90; //duration of game in seconds
+    private float gameDur = 120; //duration of game in seconds
     private float circGameDur;
     private bool maxHintsSpawned = false;
     private float rigDegree;

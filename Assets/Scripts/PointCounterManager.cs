@@ -30,6 +30,8 @@ public class PointCounterManager : MonoBehaviour
     public static float gazeDurLamp;
     public static float gazeDurSparrow;
     public static float gazeDurFountain;
+    public static float gazeDurModeACanvas;
+    public static float gazeDurModeBCanvas;
 
     public static float timeToRecFox;
     public static float timeToFirstFixBlueCanvas;
@@ -54,6 +56,8 @@ public class PointCounterManager : MonoBehaviour
     public static int gazeCountLamp;
     public static int gazeCountSparrow;
     public static int gazeCountFountain;
+    public static int gazeCountModeACanvas;
+    public static int gazeCountModeBCanvas;
 
     public static int countHitRed;
     public static int countHitBlue;

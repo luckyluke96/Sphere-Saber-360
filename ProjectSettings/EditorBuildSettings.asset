@@ -32,6 +32,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartingSceneFox.unity
     guid: f76d00c23f5f54181b61ea5bbc5506b0
+  - enabled: 0
+    path: Assets/Scenes/KeyboardScene.unity
+    guid: f498af3829bcf467a81e45b42e18af13
+  - enabled: 0
+    path: Assets/VRKeyboard/Demo/Demo.unity
+    guid: 945ce163edb617943ac3b433a10962a2
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: ec14cb0e035e342b8a3b1c183459ecd1, type: 2}
     Unity.XR.PXR.Settings: {fileID: 11400000, guid: f6f796cebba144485a9b6cb01114ca78, type: 2}

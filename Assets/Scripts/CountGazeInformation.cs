@@ -76,18 +76,11 @@ namespace Tobii.XR.Examples.GettingStarted
                 else if (gameObject.tag == "PointCounterCanvas")
                 {
                     PointCounterManager.gazeCountPointCounterCanvas += 1;
-
-                    
+  
                 }
                 else if (gameObject.tag == "BlueSphere")
                 {
                     PointCounterManager.gazeCountBlueSphere += 1;
-
-                    if (firstGaze)
-                    {
-                        PointCounterManager.timeToFirstFixBlueCanvas = spawnDur;
-                        firstGaze = false;
-                    }
 
                 }
                 else if (gameObject.tag == "RedSphere")
@@ -163,6 +156,18 @@ namespace Tobii.XR.Examples.GettingStarted
                         PointCounterManager.timeToFirstFixFountain = spawnDurFountain;
                         firstGaze = false;
                     }
+
+                }
+                else if (gameObject.tag == "ModeACanvas")
+                {
+                    PointCounterManager.gazeCountModeACanvas += 1;
+
+
+                }
+                else if (gameObject.tag == "ModeBCanvas")
+                {
+                    PointCounterManager.gazeCountModeBCanvas += 1;
+
 
                 }
 
@@ -291,6 +296,16 @@ namespace Tobii.XR.Examples.GettingStarted
                     tTime = Time.deltaTime;
                     PointCounterManager.gazeDurFountain += tTime;
 
+                }
+                else if (gameObject.tag == "ModeACanvas")
+                {
+                    tTime = Time.deltaTime;
+                    PointCounterManager.gazeDurModeACanvas += tTime;
+                }
+                else if (gameObject.tag == "ModeBCanvas")
+                {
+                    tTime = Time.deltaTime;
+                    PointCounterManager.gazeDurModeBCanvas += tTime;
                 }
 
                 PointCounterManager.gazeDur += Time.deltaTime;

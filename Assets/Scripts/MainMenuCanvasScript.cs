@@ -85,8 +85,8 @@ using PathCreation;
         {
             if (takeOffHMD)
             {
-                Destroy(GameObject.FindGameObjectWithTag("MainMenuCanvas"));
                 Instantiate(TakeOffHMDCanvas);
+                Destroy(GameObject.FindGameObjectWithTag("MainMenuCanvas"));
                 takeOffHMD = false;
             }
         }
