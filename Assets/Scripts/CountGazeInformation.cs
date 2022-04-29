@@ -197,6 +197,7 @@ namespace Tobii.XR.Examples.GettingStarted
         {
             
             //This lerp will fade the color of the object
+            /*
             if (_renderer.material.HasProperty(_baseColor)) // new rendering pipeline (lightweight, hd, universal...)
             {
                 _renderer.material.SetColor(_baseColor, Color.Lerp(_renderer.material.GetColor(_baseColor), _targetColor, Time.deltaTime * (1 / animationTime)));
@@ -205,6 +206,7 @@ namespace Tobii.XR.Examples.GettingStarted
             {
                 _renderer.material.color = Color.Lerp(_renderer.material.color, _targetColor, Time.deltaTime * (1 / animationTime));
             }
+            */
             
 
             

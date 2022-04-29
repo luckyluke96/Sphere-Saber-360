@@ -32,17 +32,19 @@ public class PeripheralSpawner : MonoBehaviour
             Debug.Log(positions[0]+","+positions[1]+","+positions[2]+","+positions[3]);
         }
 
-        foxRigid.transform.position = positions[0];
-        foxRigid.transform.Rotate(0f, Random.Range(0, 360), 0f);
-        foxMoving.transform.position = positions[1];
-        foxMoving.transform.Rotate(0f, Random.Range(0, 360), 0f); 
-        fountain.transform.position = positions[2];
-        lamp.transform.position = positions[3];
-
         foxRigidAngle = calcAngle(positions[0]);
         foxMovingAngle = calcAngle(positions[1]);
         fountainAngle = calcAngle(positions[2]);
         lampAngle = calcAngle(positions[3]);
+
+        foxRigid.transform.position = positions[0];
+        foxRigid.transform.Rotate(0f, foxRigidAngle + 90, 0f);
+        foxMoving.transform.position = positions[1];
+        foxMoving.transform.Rotate(0f, foxMovingAngle + 90, 0f); 
+        fountain.transform.position = positions[2];
+        lamp.transform.position = positions[3];
+
+        
 
         Debug.Log("FoxRig Angle: " + foxRigidAngle);
         Debug.Log("FoxMov Angle: " + calcAngle(positions[1]));

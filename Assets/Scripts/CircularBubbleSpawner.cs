@@ -26,7 +26,7 @@ public class CircularBubbleSpawner : MonoBehaviour
     private float rigRot = 0;
     private bool rigDegNotInit = true;
     private float hintSpawnDeg = 0;
-    private float hintFreq = 30f;
+    private float hintFreq = 5f; //frequence of spawning hints
     private float hintSpawnTime;
     private static float angle = 0;
     private static float radius = 6f;
@@ -36,7 +36,7 @@ public class CircularBubbleSpawner : MonoBehaviour
     private int numColors = 1;
     private int bubbleCounter = 0;
     private float time;
-    private float gameDur = 20; //duration of game in seconds
+    private float gameDur = 120; //duration of game in seconds
     private float circGameDur;
     private bool maxHintsSpawned = false;
     private float rigDegree;
@@ -558,12 +558,17 @@ void Update()
         }
         else if (numColors == 3)
         {
+            
+
             if (!maxHintsSpawned)
             {
+                Destroy(GameObject.FindGameObjectWithTag("HinCanvasYellow"));
                 Instantiate(hintCanvasLeftHand, newPos, Quaternion.Euler(0f, camDeg, 0f));
+                
                 leftHandBonus = true;
                 maxHintsSpawned = true;
-                Destroy(GameObject.FindGameObjectWithTag("HintCanvasYellow"));
+                
+                
                 PointCounterManager.angleLeftHandCanvas = angle;
             }
         }

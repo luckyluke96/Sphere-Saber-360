@@ -173,7 +173,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -115}
-  m_SizeDelta: {x: 660, y: 70}
+  m_SizeDelta: {x: 800, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8007179513860359546
 CanvasRenderer:
@@ -297,8 +297,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2762736937923233282}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 4.9972534, y: 141.99829, z: 8.999944}
-  m_LocalScale: {x: 720.5, y: 350.27, z: 54.874996}
+  m_LocalPosition: {x: 4.9978, y: 204, z: 8.999944}
+  m_LocalScale: {x: 796.65686, y: 369.74503, z: 54.874996}
   m_Children: []
   m_Father: {fileID: 695099745294516601}
   m_RootOrder: 0
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &3299786824204818414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,7 +637,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -15}
-  m_SizeDelta: {x: 620, y: 300}
+  m_SizeDelta: {x: 780, y: 370}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5363629493714965323
 CanvasRenderer:
@@ -681,9 +681,11 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "In diesem Spielmodus erscheinen in einem Umkreis von 180\xB0 Kugeln verschiedener
-    Farbe und bewegen sich auf Sie zu. \nIhre Aufgabe ist es, diese Kugeln mit den
-    Schwertern zu zerschlagen.\nKlicken Sie auf \"Starte Spielmodus B\", wenn Sie
-    bereit sind."
+    Farbe und bewegen sich auf Sie zu. Ihre Aufgabe ist es, diese Kugeln mit den
+    Schwertern zu zerschlagen. Rote Kugeln bringen 20 Punkte, wenn sie zerschlagen
+    werden und 20 Minuspunkte, wenn sie nicht getroffen werden. Zu den weiteren Farben
+    erhalten Sie Informationen w\xE4hrend des Spiels. \r\nKlicken Sie auf \"Starte
+    Spielmodus B\", wenn Sie bereit sind.\r\n"
 --- !u!1 &6357388896958623033
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,8 +722,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 163}
-  m_SizeDelta: {x: 660, y: 300}
+  m_AnchoredPosition: {x: 0, y: 205}
+  m_SizeDelta: {x: 800, y: 380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6515397303300715620
 CanvasRenderer:
@@ -802,7 +804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2662993231488492756, guid: 205aef8b4022c44e1811cb09bfe9541d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 660
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 2662993231488492756, guid: 205aef8b4022c44e1811cb09bfe9541d, type: 3}
       propertyPath: m_SizeDelta.y

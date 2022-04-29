@@ -33,6 +33,8 @@ TagManager:
   - MainMenuCanvas
   - ModeACanvas
   - ModeBCanvas
+  - Right
+  - YellowCanvas
   layers:
   - Default
   - TransparentFX

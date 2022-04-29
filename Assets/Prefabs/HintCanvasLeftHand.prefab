@@ -41,7 +41,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: 1134, y: 420}
+  m_SizeDelta: {x: 1400, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5772372324243092446
 Canvas:
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &5772372324243092440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 500}
+  m_SizeDelta: {x: 1400, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5772372325558850438
 CanvasRenderer:
@@ -234,7 +234,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Alle Farben mit links zu zerschlagen bringt 150 Punkte
+  m_Text: Alle Farben (auch Blau) mit links zu zerschlagen bringt 150 Punkte. Werden
+    Kugeln mit rechts zerschlagen, gibt dies 100 Minuspunkte.
 --- !u!1 &8985995893055424569
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +265,7 @@ Transform:
   m_GameObject: {fileID: 8985995893055424569}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1133.6703, y: 435.85312, z: 60.512653}
+  m_LocalScale: {x: 1385.6301, y: 624.25305, z: 60.512653}
   m_Children: []
   m_Father: {fileID: 5772372324243092445}
   m_RootOrder: 1

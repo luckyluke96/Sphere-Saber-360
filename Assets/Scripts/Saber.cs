@@ -43,7 +43,7 @@ public class Saber : MonoBehaviour
                 if (hit.transform.tag == "BlueSphere")
                 {
                     // pointCounterManager.GetComponent<PointCounterManager>().points -= 20;
-                    PointCounterManager.points -= 20f;
+                    
                     PointCounterManager.countHitBlue++;
 
                    
@@ -52,24 +52,38 @@ public class Saber : MonoBehaviour
                         PointCounterManager.points += 150f;
                         PointCounterManager.countHitLeftBonus++;
                     }
+                    else if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Right"))
+                    {
+                        PointCounterManager.points -= 100f;
+                    }
+                    else
+                    {
+                        PointCounterManager.points -= 20f;
+                    }
 
                 }
                 else if (hit.transform.tag == "RedSphere")
                 {
-                    PointCounterManager.points += 20f;
-                    PointCounterManager.countHitRed++;
-
                     
+                    PointCounterManager.countHitRed++;
 
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {
                         PointCounterManager.points += 150f;
                         PointCounterManager.countHitLeftBonus++; 
                     }
+                    else if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Right"))
+                    {
+                        PointCounterManager.points -= 100f;
+                    }
+                    else
+                    {
+                        PointCounterManager.points += 20f;
+                    }
                 }
                 else if (hit.transform.tag == "YellowSphere")
                 {
-                    PointCounterManager.points += 100f;
+                    
                     PointCounterManager.countHitYellow++;
 
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
@@ -77,16 +91,32 @@ public class Saber : MonoBehaviour
                         PointCounterManager.countHitLeftBonus++;
                         PointCounterManager.points += 150f;
                     }
+                    else if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Right"))
+                    {
+                        PointCounterManager.points -= 100f;
+                    }
+                    else
+                    {
+                        PointCounterManager.points += 100f;
+                    }
                 }
                 else if (hit.transform.tag == "LastSphere")
                 {
-                    PointCounterManager.points += 20f;
+                    
                     PointCounterManager.countHitRed++;
 
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {
                         PointCounterManager.countHitLeftBonus++;
                         PointCounterManager.points += 150f;
+                    }
+                    else if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Right"))
+                    {
+                        PointCounterManager.points -= 100f;
+                    }
+                    else
+                    {
+                        PointCounterManager.points += 20f;
                     }
                     //StartCoroutine(wait(3));
                     //Instantiate(backToMenuCanvas);

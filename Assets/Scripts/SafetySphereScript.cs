@@ -45,6 +45,7 @@ public class SafetySphereScript : MonoBehaviour
             else if(other.tag == "BlueSphere")
             {
                 Instantiate(explosionBlue, other.gameObject.transform.position, Quaternion.identity);
+                PointCounterManager.points += 20f;
             }
             else if (other.tag == "YellowSphere")
             {
