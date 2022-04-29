@@ -40,6 +40,7 @@ public class CircularBubbleSpawner : MonoBehaviour
     private float circGameDur;
     private bool maxHintsSpawned = false;
     private float rigDegree;
+    private bool lastHint = false;
 
 
     // Start is called before the first frame update
@@ -522,7 +523,10 @@ public class CircularBubbleSpawner : MonoBehaviour
 
 void Update()
     {
-
+        if(maxHintsSpawned)
+        {
+            Destroy(GameObject.FindGameObjectWithTag("HintCanvasYellow"));
+        }
     }
 
     private void FixedUpdate()
@@ -562,7 +566,7 @@ void Update()
 
             if (!maxHintsSpawned)
             {
-                Destroy(GameObject.FindGameObjectWithTag("HinCanvasYellow"));
+                //Destroy(GameObject.FindGameObjectWithTag("HintCanvasYellow"));
                 Instantiate(hintCanvasLeftHand, newPos, Quaternion.Euler(0f, camDeg, 0f));
                 
                 leftHandBonus = true;
@@ -572,6 +576,7 @@ void Update()
                 PointCounterManager.angleLeftHandCanvas = angle;
             }
         }
+        
 
 
 
