@@ -66,6 +66,7 @@ public class PointCounterManager : MonoBehaviour
 
     public static int countSpawnedRed;
     public static int countSpawnedBlue;
+    public static int countSpawnedBlueBeforeLeft;
     public static int countSpawnedYellow;
     public static int countSpawnedLeftBonus;
 

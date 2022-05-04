@@ -43,8 +43,11 @@ public class Saber : MonoBehaviour
                 if (hit.transform.tag == "BlueSphere")
                 {
                     // pointCounterManager.GetComponent<PointCounterManager>().points -= 20;
-                    
-                    PointCounterManager.countHitBlue++;
+
+                    if (!CircularBubbleSpawner.leftHandBonus)
+                    {
+                        PointCounterManager.countHitBlue++;
+                    }
 
                    
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))

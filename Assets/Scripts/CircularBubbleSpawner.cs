@@ -26,7 +26,7 @@ public class CircularBubbleSpawner : MonoBehaviour
     private float rigRot = 0;
     private bool rigDegNotInit = true;
     private float hintSpawnDeg = 0;
-    private float hintFreq = 5f; //frequence of spawning hints
+    private float hintFreq = 30f; //frequence of spawning hints
     private float hintSpawnTime;
     private static float angle = 0;
     private static float radius = 6f;
@@ -144,7 +144,14 @@ public class CircularBubbleSpawner : MonoBehaviour
             }
             else if(bubbleType == 1)
             {
-                PointCounterManager.countSpawnedBlue++;
+                if (!leftHandBonus)
+                {
+                    PointCounterManager.countSpawnedBlueBeforeLeft++;
+                }
+                else
+                {
+                    PointCounterManager.countSpawnedBlue++;
+                }
             }
             else if(bubbleType == 2)
             {
@@ -391,7 +398,15 @@ public class CircularBubbleSpawner : MonoBehaviour
             }
             else if (bubbleType == 1)
             {
-                PointCounterManager.countSpawnedBlue++;
+                if (!leftHandBonus)
+                {
+                    PointCounterManager.countSpawnedBlueBeforeLeft++;
+                }
+                else
+                {
+                    PointCounterManager.countSpawnedBlue++;
+                }
+                
             }
             else if (bubbleType == 2)
             {
