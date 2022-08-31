@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using System.IO;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Stores eye tracking and game data
+/// </summary>
 public class PointCounterManager : MonoBehaviour
 {
     private Text PointCounterText;
@@ -85,11 +88,7 @@ public class PointCounterManager : MonoBehaviour
     public static float angleLeftHandCanvas;
 
     public static float durCircularGame;
-    //public int points;
 
-    
-
-    // Start is called before the first frame update
     void Start()
     {
         // PointCounterText = GameObject.Find("PointCounterText").GetComponent<Text>();
@@ -115,44 +114,19 @@ public class PointCounterManager : MonoBehaviour
         {
             gameLevel = "LevelRandom180WOHints";
         }
-
-
-
     }
 
-    // Update is called once per frame
     void Update()
     {
         
-        //GazeCounterText = GameObject.Find("PointCounterTextStable").GetComponent<Text>();
-        //TimerText = GameObject.Find("TimerText").GetComponent<Text>();
-
         PointCounterText = GameObject.Find("PointCounterText").GetComponent<Text>();
         PointCounterText.text = "Punkte: " + points.ToString();
 
-        // PointCounterText.text = "Punkte: " + data["points"].ToString();
-
-        // gazeDur = gazeDurBlueCanvas + gazeDurYellowCanvas + gazeDurPointCounterCanvas + gazeDurBlueSphere + gazeDurRedSphere + gazeDurYellowSphere;
-
-        // GazeCounterText.text = "redbubble " + gazeDurRedSphere.ToString() + "ms\nbluesphere " + gazeDurBlueSphere.ToString();
-
-        // timer += Time.deltaTime;
-        // TimerText.text = "time: " + timer.ToString() + "s";
-
-        // GameObject.Find("TimerText").GetComponent<Text>().text = "Terr Dur: " + gazeDurTerrain;
-
-        // Debug.Log("Sign text: " + PointCounterText.text);
-
-        /*
-        string filePath = Application.persistentDataPath + "/test.txt";
-        Debug.Log(filePath);
-        File.WriteAllText("test.txt", "hallo test text");
-
-        PointCounterText = GameObject.Find("PointCounterText").GetComponent<Text>();
-        PointCounterText.text = "path: " + filePath;
-        */
     }
 
+    /// <summary>
+    /// Reset stored data after game
+    /// </summary>
     public static void resetVariables()
     {
         points = 0;

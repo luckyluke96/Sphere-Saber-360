@@ -5,19 +5,21 @@ using UnityEngine.SceneManagement;
 using PathCreation;
 
 
-
+    /// <summary>
+    /// Script to load correct scnene from first menu scene
+    /// </summary>
     public class MainMenuCanvasScript : MonoBehaviour
-    {
+        {
         public PathCreator pathCreator;
         public EndOfPathInstruction endOfPathInstruction;
         public GameObject pathTraveller;
-        public float speed = 1;
         public GameObject MenuCanvas;
         public GameObject ExplanationA;
         public GameObject ExplanationB;
-    public GameObject TakeOffHMDCanvas;
-        public static bool takeOffHMD = false;
+        public GameObject TakeOffHMDCanvas;
+        public float speed = 1;
 
+        public static bool takeOffHMD = false;
 
         float distanceTravelled;
         bool runPath = false;
@@ -47,15 +49,16 @@ using PathCreation;
             SceneManager.LoadScene(5);
         }
 
-
         public void ExitGame()
         {
             Application.Quit();
         }
 
+        /// <summary>
+        /// Optional method to let fox run along path
+        /// </summary>
         public void runFox()
         {
-            
             runPath = true;
             Instantiate(MenuCanvas);
             GameObject.Find("Fox").GetComponent<Animator>().SetBool("isRunning", true);
@@ -91,6 +94,9 @@ using PathCreation;
             }
         }
 
+        /// <summary>
+        /// Optional for path implementation
+        /// </summary>
         void OnPathChanged()
         {
             distanceTravelled = pathCreator.path.GetClosestDistanceAlongPath(pathTraveller.transform.position);
@@ -99,17 +105,6 @@ using PathCreation;
 
         private void Update()
         {
-            /* DEBUGGING
-            if (Input.GetKeyDown(KeyCode.Tab))
-            {
-                Debug.Log("Tab");
-                runFox();
-
-                
-            }
-            */
-
-            Debug.Log(distanceTravelled);
             if ((pathCreator != null) && runPath)
             {
                 distanceTravelled += speed * Time.deltaTime;

@@ -9,7 +9,7 @@ namespace Tobii.XR.Examples.GettingStarted
 {
     namespace PathCreation.Examples
     {
-        //Monobehaviour which implements the "IGazeFocusable" interface, meaning it will be called on when the object receives focus
+        // not used in final game
         public class MovePathAtGaze : MonoBehaviour, IGazeFocusable
         {
             private static readonly int _baseColor = Shader.PropertyToID("_BaseColor");
@@ -28,12 +28,9 @@ namespace Tobii.XR.Examples.GettingStarted
             private bool firstGaze = true;
             private bool pathEnd = false;
 
-            //The method of the "IGazeFocusable" interface, which will be called when this object receives or loses focus
+            // Check if object is focused
             public void GazeFocusChanged(bool hasFocus)
             {
-
-                //If this object received focus, fade the object's color to highlight color
-                
                 if (hasFocus)
                 {
                     if (firstGaze)
@@ -42,21 +39,16 @@ namespace Tobii.XR.Examples.GettingStarted
                         firstGaze = false;
                         GameObject.Find("Fox").GetComponent<Animator>().SetBool("isRunning", true);
                     }
-                                          //_targetColor = highlightColor;
+                                          
                     focused = true;
                 }
-                //If this object lost focus, fade the object's color to it's original color
+               
                 else
                 {
                     _targetColor = _originalColor;
-                }
-                
-
-                
+                }  
 
             }
-
-            
 
             private void Start()
             {
@@ -67,30 +59,7 @@ namespace Tobii.XR.Examples.GettingStarted
 
             private void Update()
             {
-                /* DEBUGGING
-                if(Input.GetKeyDown("space"))
-                {
-                    Debug.Log("Space");
-                    
-                    if (true)
-                    {
-                        if (firstGaze)
-                        {
-                            PointCounterManager.timeToRecFox = spawnDur;
-                            firstGaze = false;
-                            GameObject.Find("Fox").GetComponent<Animator>().SetBool("isRunning", true);
-                        }
-                        //_targetColor = highlightColor;
-                        focused = true;
-                    }
-                    //If this object lost focus, fade the object's color to it's original color
-                    else
-                    {
-                        _targetColor = _originalColor;
-                    }
-                }
-                */
-
+                
                 if (_renderer.material.HasProperty(_baseColor)) // new rendering pipeline (lightweight, hd, universal...)
                 {
                     _renderer.material.SetColor(_baseColor, Color.Lerp(_renderer.material.GetColor(_baseColor), _targetColor, Time.deltaTime * (1 / animationTime)));
@@ -99,8 +68,8 @@ namespace Tobii.XR.Examples.GettingStarted
                 {
                     _renderer.material.color = Color.Lerp(_renderer.material.color, _targetColor, Time.deltaTime * (1 / animationTime));
                 }
-                
 
+                // let object run along path
                 if ((pathCreator != null) && focused)
                 {
                     distanceTravelled += speed * Time.deltaTime;

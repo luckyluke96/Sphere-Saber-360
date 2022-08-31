@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-
+/// <summary>
+/// Spawn objects in periphery
+/// </summary>
 public class PeripheralSpawner : MonoBehaviour
 {
     public GameObject foxRigid;
@@ -18,7 +20,6 @@ public class PeripheralSpawner : MonoBehaviour
     public static float fountainAngle;
     public static float lampAngle;
 
-    // Start is called before the first frame update
     void Start()
     {
         int lim = positions.Length;
@@ -44,12 +45,10 @@ public class PeripheralSpawner : MonoBehaviour
         fountain.transform.position = positions[2];
         lamp.transform.position = positions[3];
 
-        
-
-        Debug.Log("FoxRig Angle: " + foxRigidAngle);
-        Debug.Log("FoxMov Angle: " + calcAngle(positions[1]));
-        Debug.Log("Fountain Angle: " + fountainAngle);
-        Debug.Log("Lamp Angle: " + calcAngle(positions[3]));
+        //Debug.Log("FoxRig Angle: " + foxRigidAngle);
+        //Debug.Log("FoxMov Angle: " + calcAngle(positions[1]));
+        //Debug.Log("Fountain Angle: " + fountainAngle);
+        //Debug.Log("Lamp Angle: " + calcAngle(positions[3]));
 
         PointCounterManager.angleFoxRigid = foxRigidAngle;
         PointCounterManager.angleFoxMoving = foxMovingAngle;
@@ -60,12 +59,8 @@ public class PeripheralSpawner : MonoBehaviour
         PointCounterManager.positionFoxMoving = positions[1];
         PointCounterManager.positionFountain = positions[2];
         PointCounterManager.positionLamp = positions[3];
-
-
-
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -90,8 +85,5 @@ public class PeripheralSpawner : MonoBehaviour
         {
             return Vector3.SignedAngle(vec, center, Vector3.up);
         }
-            
-       
-
     }
 }

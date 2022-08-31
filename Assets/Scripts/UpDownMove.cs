@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// not used in final game
 public class UpDownMove : MonoBehaviour
 {
 

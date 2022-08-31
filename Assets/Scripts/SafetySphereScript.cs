@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Script that recognizes if balls are not hit early enough
+/// </summary>
 public class SafetySphereScript : MonoBehaviour
 {
     public GameObject backToMenuCanvas;
@@ -26,18 +29,6 @@ public class SafetySphereScript : MonoBehaviour
         Debug.Log("trigger: "+other.tag);
         if(other.tag == "RedSphere" || other.tag == "BlueSphere" || other.tag == "YellowSphere")
         {
-            /*
-            switch(other.tag)
-            {
-                case "RedSphere": Instantiate(explosionRed, other.gameObject.transform.position, Quaternion.identity);
-                    break;
-                case "BlueSphere": Instantiate(explosionBlue, other.gameObject.transform.position, Quaternion.identity);
-                    break;
-                case "YellowSphere": Instantiate(explosionYellow, other.gameObject.transform.position, Quaternion.identity);
-                    break;
-            }*/
-
-            
             if(other.tag == "RedSphere")
             {
                 Instantiate(explosionRed, other.gameObject.transform.position, Quaternion.identity);
@@ -60,6 +51,7 @@ public class SafetySphereScript : MonoBehaviour
             
             Destroy(other.gameObject);
             DataCollection.LogGameData();
+            PointCounterManager.resetVariables();
 
             MainMenuCanvasScript.takeOffHMD = true;
 

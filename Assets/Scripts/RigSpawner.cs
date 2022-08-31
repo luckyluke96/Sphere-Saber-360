@@ -6,11 +6,11 @@ public class RigSpawner : MonoBehaviour
 {
     public static float rigDegree = 0;
     public GameObject spawnManager;
-    // Start is called before the first frame update
+    
     void Start()
     {
         Instantiate(spawnManager);
-        // rigDegree = Random.Range(0, 360);
+        // rigDegree = Random.Range(0, 360); Uncomment if rig should spawn in random direction
         rigDegree = 0;
         transform.Rotate(0f, rigDegree, 0f);
         // Debug.Log("rig spawner deg: "+ rigDegree);

@@ -21,10 +21,8 @@ public class SphereMove : MonoBehaviour
         Camera camera = Camera.main;
         Vector3 camPosition = camera.ViewportToWorldPoint(new Vector3(0, 0, camera.nearClipPlane));
         Vector3 updatedPos = new Vector3(camPosition.x, camPosition.y - 0.4f, camPosition.z);
-        // Debug.Log("cam x: " + camPosition.x + "cam z:" + camPosition.z);
-        // Debug.Log("rotation: " + camera.transform.rotation.y);
 
-        // Movement towards camposition
+        // Movement towards cam position
         transform.position = Vector3.MoveTowards(transform.position, updatedPos, Time.deltaTime * 0.8f);
 
         // Move towards center

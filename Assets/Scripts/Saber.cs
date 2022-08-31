@@ -4,6 +4,9 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Functions of saber
+/// </summary>
 public class Saber : MonoBehaviour
 {
 
@@ -13,8 +16,6 @@ public class Saber : MonoBehaviour
     private GameObject pointCounterManager;
     public GameObject backToMenuCanvas;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         destroySound = GetComponent<AudioSource>();
@@ -27,7 +28,6 @@ public class Saber : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        //PointCounterManager.points += 0.0001f;
         
         if( Physics.Raycast(transform.position, transform.forward, out hit, 1, layer) && (hit.transform.tag == "BlueSphere"
             || hit.transform.tag == "RedSphere"
@@ -35,20 +35,16 @@ public class Saber : MonoBehaviour
             || hit.transform.tag == "GreenSphere"
             || hit.transform.tag == "LastSphere"))
         {
-            
-            
-            
+
             if(Vector3.Angle(transform.position - previousPos, hit.transform.up) > 130)
             {
                 if (hit.transform.tag == "BlueSphere")
                 {
-                    // pointCounterManager.GetComponent<PointCounterManager>().points -= 20;
 
                     if (!CircularBubbleSpawner.leftHandBonus)
                     {
                         PointCounterManager.countHitBlue++;
                     }
-
                    
                     if (CircularBubbleSpawner.leftHandBonus && (gameObject.tag == "Left"))
                     {
@@ -130,23 +126,10 @@ public class Saber : MonoBehaviour
                     MainMenuCanvasScript.takeOffHMD = true;
                    
                     SceneManager.LoadScene(0);
-                    
-
-                    
                 }
                 destroySound.Play();
                 Destroy(hit.transform.gameObject);
-
-                // string filePath = Application.persistentDataPath + "/test.txt";
-                // File.WriteAllText("test.txt", "hallo test text");
-
-
-
             }
-            
-            
-            
-            //Destroy(hit.transform.gameObject);
         }
         previousPos = transform.position;
     }

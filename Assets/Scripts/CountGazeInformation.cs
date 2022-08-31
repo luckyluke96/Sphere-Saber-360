@@ -6,7 +6,9 @@ using UnityEngine;
 
 namespace Tobii.XR.Examples.GettingStarted
 {
-    //Monobehaviour which implements the "IGazeFocusable" interface, meaning it will be called on when the object receives focus
+    /// <summary>
+    /// Collects gaze and eye tracking data of the object
+    /// </summary>
     public class CountGazeInformation : MonoBehaviour, IGazeFocusable
     {
         private static readonly int _baseColor = Shader.PropertyToID("_BaseColor");
@@ -34,17 +36,13 @@ namespace Tobii.XR.Examples.GettingStarted
         private float spawnDurFountain;
         private float spawnDurLamp;
 
-
-        //The method of the "IGazeFocusable" interface, which will be called when this object receives or loses focus
         public void GazeFocusChanged(bool hasFocus)
         {
             focus = hasFocus;
-            //If this object received focus, fade the object's color to highlight color
+            
             if (hasFocus)
             {
-                //startTime = System.DateTime.UtcNow;
                 _targetColor = highlightColor;
-                // PointCounterManager.gazeDur += 10;
 
                 if (gameObject.tag == "TestCube")
                 {
@@ -59,8 +57,6 @@ namespace Tobii.XR.Examples.GettingStarted
                         PointCounterManager.timeToFirstFixBlueCanvas = spawnDur;
                         firstGaze = false;
                     }
-                   
-                    
                 }
                 else if (gameObject.tag == "HintCanvasYellow")
                 {
@@ -172,13 +168,9 @@ namespace Tobii.XR.Examples.GettingStarted
                 }
 
             }
-            //If this object lost focus, fade the object's color to it's original color
             else
             {
-                //endTime = System.DateTime.UtcNow;
                 _targetColor = _originalColor;
-                //System.TimeSpan diffTime = endTime - startTime;
-                //PointCounterManager.gazeDur += diffTime.Milliseconds;
             }
         }
 
@@ -187,16 +179,14 @@ namespace Tobii.XR.Examples.GettingStarted
             _renderer = GetComponent<Renderer>();
             _originalColor = _renderer.material.color;
             _targetColor = _originalColor;
-
-
         }
 
         
 
         private void Update()
         {
-            
-            //This lerp will fade the color of the object
+
+            // Uncomment to change color of object to red when focused
             /*
             if (_renderer.material.HasProperty(_baseColor)) // new rendering pipeline (lightweight, hd, universal...)
             {
@@ -207,16 +197,9 @@ namespace Tobii.XR.Examples.GettingStarted
                 _renderer.material.color = Color.Lerp(_renderer.material.color, _targetColor, Time.deltaTime * (1 / animationTime));
             }
             */
-            
-
-            
 
             if (focus)
             {
-
-                // tTime = Time.deltaTime;
-                
-
                 if (gameObject.tag == "TestCube")
                 {
                     tTime = Time.deltaTime;
@@ -311,27 +294,14 @@ namespace Tobii.XR.Examples.GettingStarted
                 }
 
                 PointCounterManager.gazeDur += Time.deltaTime;
-
-
             }
-            
-
         }
 
         private void FixedUpdate()
         {
             
-            
             spawnDur += Time.deltaTime;
 
-            // Debug.Log("cam deg: " + CircularBubbleSpawner.getCameraDirectionDeg());
-
-            // Debug.Log("foxrigid in FOV: " + isInFieldOfView(PeripheralSpawner.foxRigidAngle));
-            // Debug.Log("foxmoving in FOV: " + isInFieldOfView(PeripheralSpawner.foxMovingAngle));
-            // Debug.Log("fountain in FOV: " + isInFieldOfView(PeripheralSpawner.fountainAngle));
-            // Debug.Log("lamp in FOV: " + isInFieldOfView(PeripheralSpawner.lampAngle));
-
-            
             // sets variable to true that marks if object has been in FOV at least once
             if(isInFieldOfView(PeripheralSpawner.foxRigidAngle))
             {
@@ -355,18 +325,17 @@ namespace Tobii.XR.Examples.GettingStarted
             if(fountainInFOV) { spawnDurFountain += Time.deltaTime; };
             if(lampInFOV) { spawnDurLamp += Time.deltaTime; };
             
-
         }
 
+        /// <summary>
+        /// Checks if parameter angle is inside FOV range
+        /// </summary>
         private bool isInFieldOfView(float angle)
         {
             float camDeg = CircularBubbleSpawner.getCameraDirectionDeg();
             float left = camDeg - 30f; 
             float right = camDeg + 30f;
 
-            // Debug.Log("left: " + left);
-            // Debug.Log("right: " + right);
-            // Debug.Log("angle: " + angle);
 
             float diff = (camDeg - angle + 180f + 360f) % 360f - 180f;
             if(-30 <= diff && diff <= 30)
