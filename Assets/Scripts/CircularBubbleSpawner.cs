@@ -28,6 +28,7 @@ public class CircularBubbleSpawner : MonoBehaviour
     private float gameDurationPerimeter = 360;
     private float gameDurationPerimeter180 = 180;
     private int numColors = 1;
+    private int bubbleCounter = 0;
     private float bubbleFrequency = 2f; //frequency of bubbles spawning in seconds
     private float time;
     private float gameDur = 120; //duration of game in seconds
