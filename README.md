@@ -1,1 +1,3 @@
-# BubbleSaber-2020-3-remote
+# Sphere Saber
+
+This is the repository of the Unity VR application Sphere Saber
