@@ -176,9 +176,12 @@ namespace Tobii.XR.Examples.GettingStarted
 
         private void Start()
         {
+            // Uncomment to change color of object to red when focused
+            /*
             _renderer = GetComponent<Renderer>();
             _originalColor = _renderer.material.color;
             _targetColor = _originalColor;
+            */
         }
 
         
@@ -333,8 +336,8 @@ namespace Tobii.XR.Examples.GettingStarted
         private bool isInFieldOfView(float angle)
         {
             float camDeg = CircularBubbleSpawner.getCameraDirectionDeg();
-            float left = camDeg - 30f; 
-            float right = camDeg + 30f;
+            // float left = camDeg - 30f; 
+            // float right = camDeg + 30f;
 
 
             float diff = (camDeg - angle + 180f + 360f) % 360f - 180f;
