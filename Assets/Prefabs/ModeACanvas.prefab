@@ -211,7 +211,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Zur\xFCck zum Hauptmen\xFC"
+  m_Text: Back to the main menu
 --- !u!1 &1034556728202311433
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,11 +290,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "In diesem Spielmodus erscheinen in einem Umkreis von 180\xB0 rote Kugeln
-    und bewegen sich auf Sie zu. Ihre Aufgabe ist es, m\xF6glichst viele Kugeln mit
-    den Schwertern zu zerschlagen. \r\nF\xFCr jede zerschlagene Kugel erhalten Sie
-    20 Punkte, jede Kugel, die nicht getroffen wurde, gibt 20 Minuspunkte.\r\nKlicken
-    Sie auf \"Starte Spielmodus A\", wenn Sie bereit sind.\r\n"
+  m_Text: "In this game mode, red balls appear in a 180\xB0 radius and move towards
+    you. Your task is to smash as many balls as possible with the swords. \nFor each
+    smashed ball you get 20 points, each ball that was not hit gives 20 minus points.\nClick
+    \"Start Game Mode A\" when you are ready."
 --- !u!1 &1237608589685788928
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +449,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Starte Spielmodus A
+  m_Text: Start Game Mode A
 --- !u!1 &6709667512564949587
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +916,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &7268272491224935383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,11 +949,11 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   endOfPathInstruction: 0
   pathTraveller: {fileID: 0}
-  speed: 1
   MenuCanvas: {fileID: 8376497706215791993, guid: 2944d4fc082c34883be3a9df5df664f2, type: 3}
   ExplanationA: {fileID: 8399621755870882799}
   ExplanationB: {fileID: 4432763090644834262, guid: 6a802238559e142d3a4a67835c39d54b, type: 3}
   TakeOffHMDCanvas: {fileID: 0}
+  speed: 1
 --- !u!114 &2633753099522643240
 MonoBehaviour:
   m_ObjectHideFlags: 0

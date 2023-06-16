@@ -466,7 +466,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3299786824204818414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,11 +499,11 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   endOfPathInstruction: 0
   pathTraveller: {fileID: 0}
-  speed: 1
   MenuCanvas: {fileID: 8376497706215791993, guid: 2944d4fc082c34883be3a9df5df664f2, type: 3}
   ExplanationA: {fileID: 8399621755870882799, guid: f66c2d5ea67f143ec8b1d4b8c1369ffe, type: 3}
   ExplanationB: {fileID: 4432763090644834262}
   TakeOffHMDCanvas: {fileID: 0}
+  speed: 1
 --- !u!114 &7897587020072691985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,7 +601,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Zur\xFCck zum Hauptmen\xFC"
+  m_Text: Back to the main menu
 --- !u!1 &5138147771126614832
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,12 +680,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "In diesem Spielmodus erscheinen in einem Umkreis von 180\xB0 Kugeln verschiedener
-    Farbe und bewegen sich auf Sie zu. Ihre Aufgabe ist es, diese Kugeln mit den
-    Schwertern zu zerschlagen. Rote Kugeln bringen 20 Punkte, wenn sie zerschlagen
-    werden und 20 Minuspunkte, wenn sie nicht getroffen werden. Zu den weiteren Farben
-    erhalten Sie Informationen w\xE4hrend des Spiels. \r\nKlicken Sie auf \"Starte
-    Spielmodus B\", wenn Sie bereit sind.\r\n"
+  m_Text: "In this game mode, balls of different colors appear in a 180\xB0 radius
+    and move towards you. Your task is to smash these balls with the swords. Red
+    balls bring 20 points if they are smashed and 20 minus points if they are not
+    hit. You will get information about the other colors during the game. \nClick
+    \"Start Game Mode B\" when you are ready."
 --- !u!1 &6357388896958623033
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +876,10 @@ PrefabInstance:
     - target: {fileID: 2662993231488492758, guid: 205aef8b4022c44e1811cb09bfe9541d, type: 3}
       propertyPath: m_Color.r
       value: 0.8207547
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402210232368292072, guid: 205aef8b4022c44e1811cb09bfe9541d, type: 3}
+      propertyPath: m_Text
+      value: Start Game Mode B
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 205aef8b4022c44e1811cb09bfe9541d, type: 3}

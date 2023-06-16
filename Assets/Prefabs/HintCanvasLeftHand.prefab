@@ -234,8 +234,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Alle Farben (auch Blau) mit links zu zerschlagen bringt 150 Punkte. Werden
-    Kugeln mit rechts zerschlagen, gibt dies 100 Minuspunkte.
+  m_Text: "Smashing all colors \n(including blue) with the left hand side scores
+    150 points. \nIf balls are smashed with the right, you get 100 minus points."
 --- !u!1 &8985995893055424569
 GameObject:
   m_ObjectHideFlags: 0

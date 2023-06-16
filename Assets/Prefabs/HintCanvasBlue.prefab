@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Wird eine blaue Kugel zerschlagen, gibt es 20 Minuspunkte.
+  m_Text: If a blue ball is smashed, you get 20 minus points.
 --- !u!1 &708489014920018071
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &708489014920018070
 MonoBehaviour:
   m_ObjectHideFlags: 0

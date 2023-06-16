@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2799,9 +2799,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1514267367977963761, guid: 2944d4fc082c34883be3a9df5df664f2, type: 3}
+      propertyPath: m_Text
+      value: Close application
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436585148032758339, guid: 2944d4fc082c34883be3a9df5df664f2, type: 3}
+      propertyPath: m_Text
+      value: Start game A
+      objectReference: {fileID: 0}
     - target: {fileID: 4445158800223329231, guid: 2944d4fc082c34883be3a9df5df664f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ShowExplanationB
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033763336148852722, guid: 2944d4fc082c34883be3a9df5df664f2, type: 3}
+      propertyPath: m_Text
+      value: Start game B
       objectReference: {fileID: 0}
     - target: {fileID: 8376497706215791986, guid: 2944d4fc082c34883be3a9df5df664f2, type: 3}
       propertyPath: m_Pivot.x
@@ -3946,11 +3958,11 @@ MonoBehaviour:
   pathCreator: {fileID: 1438571444}
   endOfPathInstruction: 0
   pathTraveller: {fileID: 343047243}
-  speed: 1.5
   MenuCanvas: {fileID: 8376497706215791993, guid: 2944d4fc082c34883be3a9df5df664f2, type: 3}
   ExplanationA: {fileID: 0}
   ExplanationB: {fileID: 0}
   TakeOffHMDCanvas: {fileID: 0}
+  speed: 1.5
 --- !u!114 &8217631443862287991
 MonoBehaviour:
   m_ObjectHideFlags: 0

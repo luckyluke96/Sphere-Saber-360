@@ -1182,7 +1182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.371994}
+  m_AnchoredPosition: {x: 0, y: 1.3720093}
   m_SizeDelta: {x: 700, y: 383.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8376497706215791997
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8376497706215791999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1261,11 +1261,11 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   endOfPathInstruction: 0
   pathTraveller: {fileID: 0}
-  speed: 1
   MenuCanvas: {fileID: 8376497706215791993}
   ExplanationA: {fileID: 8399621755870882799, guid: f66c2d5ea67f143ec8b1d4b8c1369ffe, type: 3}
   ExplanationB: {fileID: 4432763090644834262, guid: 6a802238559e142d3a4a67835c39d54b, type: 3}
   TakeOffHMDCanvas: {fileID: 6170244841881690777, guid: 557f5d25af6134af7a5791abe007fbb8, type: 3}
+  speed: 1
 --- !u!114 &8376497706215791987
 MonoBehaviour:
   m_ObjectHideFlags: 0
